@@ -551,45 +551,8 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 480px) {
-  .container {
-    max-width: 480px;
-  }
-}
-
-@media (min-width: 920px) {
-  .container {
-    max-width: 920px;
-  }
-}
-
-@media (min-width: 1076px) {
-  .container {
-    max-width: 1076px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-  }
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .flex {
   display: flex;
-}
-
-.flex-row {
-  flex-direction: row;
 }
 
 .flex-col {
@@ -604,90 +567,87 @@ video {
   justify-content: space-between;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.font-medium {
-  font-weight: 500;
+.font-sans {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .uppercase {
   text-transform: uppercase;
 }
 
-@media (min-width: 480px) {
-  .sm\:my-auto {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
 
-  .sm\:flex {
-    display: flex;
-  }
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
 
-  .sm\:h-screen {
-    height: 100vh;
-  }
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
 
-  .sm\:flex-col {
-    flex-direction: column;
-  }
+.duration-200 {
+  transition-duration: 200ms;
+}
 
-  .sm\:items-center {
-    align-items: center;
-  }
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.hover\:text-blu400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(54 108 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 920px) {
+  .md\:ml-6 {
+    margin-left: 1.5rem;
+  }
+
   .md\:flex {
     display: flex;
   }
 
-  .md\:w-2\/5 {
-    width: 40%;
+  .md\:flex-row {
+    flex-direction: row;
   }
 
-  .md\:items-center {
-    align-items: center;
+  .md\:p-8 {
+    padding: 2rem;
   }
 
-  .md\:justify-between {
-    justify-content: space-between;
+  .md\:py-7 {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
   }
 
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1076px) {
+  .lg\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .md\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+  .lg\:w-4\/5 {
+    width: 80%;
   }
 }
 
 
-
+    
 
 
