@@ -4,15 +4,19 @@ module.exports = {
   theme: {
     fontfamily: {
       'roboto': ['roboto, sans-serif'],
-      'roboto-slab': ['roboto, serif']
+      'roboto-slab': ['roboto, serif'],
+      
     },
     screens: {
       sm: '480px',
-      md: '920px',
+      md: '720px',
       lg: '1076px',
       xl: '1440px'
     },
     extend: {
+      fontFamily: {
+        marker: ["Permanent Marker", "cursive"],
+      },
       colors: {
         blu100: '#D3DFFF',
         blu200: '#ACC2FF',
