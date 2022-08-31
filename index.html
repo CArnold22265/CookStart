@@ -16,10 +16,10 @@
 
     
 </head>
-<body class="md:w-4/5 md:mx-auto">
+<body>
     
 <!-----------NAVIGATION-------------->
-    <header class="uppercase mx-2 md:px-0 py-7 md:pr-4 font-marker text-l text-gray-700 tracking-wide">    
+    <header class="uppercase mx-2 md:px-0 py-7 md:pr-4 font-marker text-l text-gray-700 tracking-wide md:w-4/5 md:mx-auto lg:w-4/6">    
         <nav class="flex flex-col md:flex-row justify-between md:items-center"> 
      <!--------LEFT-SIDE------->     
           <div class="md:flex items-center">    
@@ -46,20 +46,30 @@
 
 
 <!--------------HERO------------------------->
-    <main class="py-16">
+    <main class="my-14 flex flex-col md:flex-row items-start md:items-center">
       <!-------left-side-------->  
-        <section>
-            <h3> Shortcut to Success </h3>
-            <h1> Cookstart guide for professional cooks</h1>
-                <p> 
-                    Easy to impliment straight-forward lessons that lead to real success in the kitchen
-                </p>
+        <section class="bg-gray-600 py-4" >
+          <div class="ml-3 md:ml-0">  
+            <ul class="flex flex-col flex-wrap md:block h-80 md:h-auto justify-between">
+              <li>
+                <h3 class="tracking-widest text-4xl font-marker text-gray-200"> Shortcut to Success </h3>
+              </li>
+              <li>
+              <h1 class="text-6xl text-blu100 font-marker uppercase tracking-wide "> Practical lessons for line cooks!</h1>
+              </li>  
+              <li>
+              <p class="text-gray-50 font-sans text-xl"> 
+                Easy to impliment straight-forward lessons that lead to real success in the kitchen
+              </p>
+              </li>
+            </ul>
+          </div>
         </section>
 
       <!-------RIGHT-SIDE------->
         <section>
             <div>
-              <img src="/images/fishy.jpg" alt="two guys cooking">
+              <img src="/images/hero.jpg" alt="two guys cooking">
             </div>
         </section>
     </main>
