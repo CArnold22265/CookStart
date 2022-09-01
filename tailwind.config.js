@@ -26,6 +26,7 @@ module.exports = {
         blumain: '#003ee7',
         PinkishAccent: '#e7003e',
         GreenAccent: '#3ee700',
+        MainCompliment: '#E73500',
       },
     },
   },
