@@ -69,51 +69,63 @@
     </header>
 
     <!--------------HERO------------------------->
-    <main
-      class="my-14 flex flex-col md:flex-row md:items-center md:w-4/5 md:mx-auto md:bg-gray-100 lg:w-4/6"
-    >
-      <!-------left-side-------->
-      <section class="bg-gray-100 p-4 md:w-1/2 md:flex-1">
-        <div class="ml-3 md:ml-0">
-          <ul class="flex flex-col flex-wrap h-fit md:h-auto justify-between">
-            <li>
-              <h1
-                class="text-6xl xl:text-7xl pb-4 text-black font-marker uppercase tracking-wide"
-              >
-                Practical lessons for line cooks!
-              </h1>
-            </li>
-            <li>
-              <p
-                class="text-gray-700 tracking-wide font-sans text-xl xl:text-2xl pb-4"
-              >
-                Culinary school teaches the fundamentals of cooking technique,
-                but in all reality it will never be able to prepare you for what
-                awaits on your first day. A person could know a million recipes
-                inside-out, and still crash and burn on any station in a
-                restaurant.
-              </p>
-              <p class="text-gray-700 tracking-wide font-sans text-xl pb-4">
-                Cookstart provides a series of lessons that if applied will take
-                your abilities to another level. Better cooks earn better pay,
-                have more job opportunities, and are highly valued. Give
-                <b>cookstart</b>
-                a shot today!
-              </p>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="button inline-block px-5 py-2.5 bg-blumain text-blu100 text-gray font-medium font-marker text-lg leading-tight tracking-widest rounded-3xl shadow-md hover:bg-blumain hover:shadow-lg hover:text-blu100 focus:bg-blumain focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blu500 active:shadow-lg transition duration-300 ease-in-out"
-              >
-                Lessons
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+    <!-- hero container -->
+    <div class="md:w-4/5 lg:w-4/6 my-14">
+      <!---- BUG maybe add md:mx-auto above.....-->
+      <main
+        class="flex flex-row lg:flex-wrap w-full justify-between items-center lg:items-baseline"
+      >
+        <!-- -----left-side------ -->
 
-      <!-------RIGHT-SIDE------->
-    </main>
+        <section
+          class="md:bg-gray-100 p-4 mr-7 bg-gray-100 mb-4 lg:flex lg:flex-col lg:flex-1 lg:basis-full"
+        >
+          <div class="ml-3 md:ml-0 lg:h-3/5">
+            <ul>
+              <li>
+                <h1
+                  class="text-6xl xl:text-7xl pb-4 text-black font-marker uppercase tracking-wide"
+                >
+                  Practical lessons for line cooks!
+                </h1>
+              </li>
+              <li>
+                <p
+                  class="text-gray-700 tracking-wide font-sans text-xl xl:text-2xl pb-4"
+                >
+                  Culinary school teaches the fundamentals of cooking technique,
+                  but in all reality it will never be able to prepare you for
+                  what awaits on your first day. A person could know a million
+                  recipes inside-out, and still crash and burn on any station in
+                  a restaurant.
+                </p>
+                <p class="text-gray-700 tracking-wide font-sans text-xl pb-4">
+                  Cookstart provides a series of lessons that if applied will
+                  take your abilities to another level. Better cooks earn better
+                  pay, have more job opportunities, and are highly valued. Give
+                  <b>cookstart</b>
+                  a shot today!
+                </p>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="button inline-block px-5 py-2.5 bg-blumain text-blu100 text-gray font-medium font-marker text-lg leading-tight tracking-widest rounded-3xl shadow-md hover:bg-blumain hover:shadow-lg hover:text-blu100 focus:bg-blumain focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blu500 active:shadow-lg transition duration-300 ease-in-out"
+                >
+                  Lessons
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-------RIGHT-SIDE------->
+        <section class="lg:flex lg:flex-col lg:flex-1 lg:basis-full">
+          <div class="h-3/5">
+            <img src="images/hero.png" />
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
