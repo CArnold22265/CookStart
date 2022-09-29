@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html"],
+  content: [
+    "./*.html",
+    "./lessons/lesson1/index.html",
+    "./lessons/lesson2/index.html",
+    "./lessons/lesson3/index.html",
+  ],
   theme: {
     fontfamily: {
       roboto: ["roboto, sans-serif"],
