@@ -14,8 +14,8 @@ module.exports = {
     screens: {
       sm: "480px",
       md: "720px",
-      lg: "1076px",
-      xl: "1340px",
+      lg: "1576px",
+      xl: "2800px",
     },
     extend: {
       fontFamily: {
@@ -28,6 +28,8 @@ module.exports = {
         blu400: "#366CFF",
         blu500: "#0f50ff",
         blumain: "#003ee7",
+        bludark: "#001f74",
+        blackish: "rgb(26,26,26)",
         PinkishAccent: "#e7003e",
         GreenAccent: "#3ee700",
         MainCompliment: "#E73500",
