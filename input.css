@@ -3,7 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.main-container {
+  margin: 0 auto;
+}
 .card {
   padding: 1rem;
   width: 25rem;

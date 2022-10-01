@@ -12,10 +12,11 @@ module.exports = {
       "roboto-slab": ["roboto, serif"],
     },
     screens: {
-      sm: "480px",
-      md: "720px",
-      lg: "1576px",
-      xl: "2800px",
+      sm: "640px",
+      md: "768px",
+      lg: "1224px",
+      xl: "1480px",
+      xxl: "2036px",
     },
     extend: {
       fontFamily: {
