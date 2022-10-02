@@ -2,25 +2,27 @@
 module.exports = {
   content: [
     "./*.html",
-    "./lessons/lesson1/index.html",
-    "./lessons/lesson2/index.html",
-    "./lessons/lesson3/index.html",
+    "./lessons/index.html",
+    "./lessons/index.html",
+    "./lessons/index.html",
   ],
   theme: {
     fontfamily: {
-      roboto: ["roboto, sans-serif"],
-      "roboto-slab": ["roboto, serif"],
+      roboto: ["roboto", "sans-serif"],
+      robotoSlab: ["roboto slab", "serif"],
     },
     screens: {
       sm: "640px",
-      md: "768px",
+      md: "968px",
       lg: "1224px",
-      xl: "1480px",
+      xl: "1680px",
       xxl: "2036px",
     },
     extend: {
       fontFamily: {
         marker: ["Permanent Marker", "cursive"],
+        roboto: ["roboto", "sans-serif"],
+        robotoSlab: ["roboto slab", "serif"],
       },
       colors: {
         blu100: "#D3DFFF",
@@ -31,6 +33,7 @@ module.exports = {
         blumain: "#003ee7",
         bludark: "#001f74",
         blackish: "rgb(26,26,26)",
+        whitish: "#f3f3f3",
         PinkishAccent: "#e7003e",
         GreenAccent: "#3ee700",
         MainCompliment: "#E73500",
