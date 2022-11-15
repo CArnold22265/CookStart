@@ -1,1 +1,1 @@
-# Cookstart is designed as a manual for young cooks to excel in their field.
+My first portfolio project currently under construction. Right now the HTML and css are 90% responsive and set up the way I want them to be.. It's currently on pause because im learning JavaScript and want to impliment it into the project. When finished it will be a simple resource for professional cooks to utilize for career growth. 
