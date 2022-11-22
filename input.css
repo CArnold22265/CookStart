@@ -71,6 +71,9 @@ p {
   display: inline-block;
 }
 
-.bullets {
-  text-decoration: ;
+.section-subheading {
+  font-size: 1.2rem;
+  font-family: "roboto-slab";
+  font-weight: "500";
+  color: ;
 }

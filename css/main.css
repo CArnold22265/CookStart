@@ -597,6 +597,10 @@ video {
   margin-left: 0.5rem;
 }
 
+.mt-3{
+  margin-top: 0.75rem;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -966,9 +970,11 @@ p {
   display: inline-block;
 }
 
-.bullets {
-  -webkit-text-decoration: ;
-          text-decoration: ;
+.section-subheading {
+  font-size: 1.2rem;
+  font-family: "roboto-slab";
+  font-weight: "500";
+  color: ;
 }
 
 .hover\:bg-blumain:hover{
