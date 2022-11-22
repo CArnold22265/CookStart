@@ -63,3 +63,14 @@ p {
   color: #e70030;
   text-transform: uppercase;
 }
+
+.section-highlighter {
+  background: #fdff32;
+  font-weight: 400;
+  color: black;
+  display: inline-block;
+}
+
+.bullets {
+  text-decoration: ;
+}
