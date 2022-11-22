@@ -593,6 +593,10 @@ video {
   margin-top: 2.5rem;
 }
 
+.ml-2{
+  margin-left: 0.5rem;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -607,6 +611,10 @@ video {
 
 .inline-block{
   display: inline-block;
+}
+
+.inline{
+  display: inline;
 }
 
 .flex{
@@ -949,6 +957,18 @@ p {
   font-weight: 300;
   color: #e70030;
   text-transform: uppercase;
+}
+
+.section-highlighter {
+  background: #fdff32;
+  font-weight: 400;
+  color: black;
+  display: inline-block;
+}
+
+.bullets {
+  -webkit-text-decoration: ;
+          text-decoration: ;
 }
 
 .hover\:bg-blumain:hover{
