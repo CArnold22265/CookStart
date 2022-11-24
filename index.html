@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cookstart tailwind bitch</title>
-    <script src="script.js"></script>
+   
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <link rel="stylesheet" href="css/main.css" />
-    <script type ="text/javascript" src="js/script.js"></script>
+    
   </head>
   <body>
     <div
@@ -198,5 +198,37 @@
 </ul>
 </div>
 </section>
+<!-- Start POLL SECTION -------------->
+<section class = "poll">
+  <div class = "poll-question">
+    <form>
+      <div class ="poll-flex">
+        <h3 class = "poll-question_heading">
+        Which of the following would improve cookstart the most?  
+        </h3>
+        <!-- QUESTIONS -->
+        <input type="radio" class="poll-q1">
+        <label for="lessons">More lessons!</label>
+        <input type="radio" class="poll-q2">
+        <label for="recipes">Add more recipes!</label>
+        <input type="radio" class="poll-q3">
+        <label for="recipe-book">Add application for storing and converting recipes.</label>
+        <input type="radio" class="poll-q4">
+        <label for="user-submit"> Allow users to submit recipes and lessons </label>
+
+        <!-- SUBMIT BUTTON -->
+        <input type="button" id="pollBtn" class="pollBtn" value="answer">
+        
+      </div> 
+    </form>
+  </div>
+  <div class = "poll-answer"></div>
+
+</section>
+
+
+
+<script src="script.js"></script>
+<script type ="text/javascript" src="js/script.js"></script>
   </body>
 </html>
