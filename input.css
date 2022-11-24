@@ -63,3 +63,17 @@ p {
   color: #e70030;
   text-transform: uppercase;
 }
+
+.section-highlighter {
+  background: #fdff32;
+  font-weight: 400;
+  color: black;
+  display: inline-block;
+}
+
+.section-subheading {
+  font-size: 1.2rem;
+  font-family: "roboto-slab";
+  font-weight: "500";
+  color: ;
+}
