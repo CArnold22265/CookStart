@@ -199,27 +199,51 @@
 </div>
 </section>
 <!-- Start POLL SECTION -------------->
-<section class = "poll">
-  <div class = "poll-question">
-    <form>
-      <div class ="poll-flex">
-        <h3 class = "poll-question_heading">
+<section class = "poll bg-blue-200  h-screen">
+  
+  <!-- CONTAINER -->
+  <div class = "poll-question pt-11
+  main-wrap main-container md:w-4/5 mx-auto box-border xxl:w-4/6">
+  
+  <!-- BG & TEXT -->
+    <form class="text-2xl">
+  <!-- POLL HEADING  -->
+      <h2 class="font-marker text-gray-700 inline-block tracking-wider text-5xl py-3 md:my-5">POLL</h2>
+  <!-- POLL CONTAINER  -->
+      <div class=" poll-wrap bg-whitish p-4 rounded-2xl">
+  <!-- POLL FLEXBOX -->
+      <div class ="h-96 poll-flex flex flex-col justify-between">
+  
+  <!-- POLL QUESTION -->
+        <h3 class = "poll-question_heading text-3xl font-medium font-robotoSlab">
         Which of the following would improve cookstart the most?  
         </h3>
-        <!-- QUESTIONS -->
-        <input type="radio" class="poll-q1">
-        <label for="lessons">More lessons!</label>
-        <input type="radio" class="poll-q2">
-        <label for="recipes">Add more recipes!</label>
-        <input type="radio" class="poll-q3">
-        <label for="recipe-book">Add application for storing and converting recipes.</label>
-        <input type="radio" class="poll-q4">
-        <label for="user-submit"> Allow users to submit recipes and lessons </label>
-
+  <!-- POLL ANSWERS -->
+        <!-- q1 -->
+        <div class ="poll-q-wrapper">
+          <input type="radio" id="lessons" class=" poll-q1 ">
+            <label class="inline-block" for="lessons">More lessons!</label>
+        </div>
+        <!-- q2 -->
+        <div class="poll-q-wrapper">
+          <input type="radio" id ="recipes" class="poll-q2 ">
+            <label for="recipes">Add more recipes!</label>
+        </div>
+        <!-- q3 -->
+        <div class="poll-q-wrapper">
+          <input type="radio" id ="recipe-book" class="poll-q3">
+            <label for="recipe-book">Add application for storing and converting recipes.</label>
+        </div>
+        <!-- q4 -->
+        <div class="poll-q-wrapper">
+          <input type="radio" id="users-sec" class="poll-q4">
+            <label for="users-sec"> Allow users to submit recipes and lessons </label>
+        </div>
         <!-- SUBMIT BUTTON -->
         <input type="button" id="pollBtn" class="pollBtn" value="answer">
         
       </div> 
+    </div>
     </form>
   </div>
   <div class = "poll-answer"></div>
