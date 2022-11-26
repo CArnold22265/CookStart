@@ -77,3 +77,54 @@ p {
   font-weight: "500";
   color: ;
 }
+
+/* POLL SECTION */
+
+/* CUSTOM RADIO BUTTONS */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #f3f3f3;
+  color: black;
+  position: relative;
+
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(0.2em);
+  margin-right: 0.2em;
+
+  /* display: grid;
+  place-content: center; */
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 100ms transform ease-in;
+  box-shadow: inset 1em 1em black;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+/* POLL SUBMIT BUTTON */
+.pollBtn {
+  align-self: start;
+  text-transform: uppercase;
+
+  font-family: roboto-slab;
+  font-weight: 600;
+
+  border: 1px solid black;
+  border-radius: 1000px;
+  padding: 0.5em 1em;
+}
