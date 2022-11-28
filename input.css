@@ -103,9 +103,6 @@ input[type="radio"] {
   border-radius: 50%;
   transform: translateY(0.17em);
   margin-right: 0.2em;
-
-  /* display: grid;
-  place-content: center; */
 }
 
 input[type="radio"]::before {
@@ -127,7 +124,6 @@ input[type="radio"]:checked::before {
 
 .poll-q-wrapper {
   color: rgb(51 65 85);
-  border: 1px solid lightgrey;
   padding: 0.5em 0 0.5em 0.2;
   border-radius: 10px;
   margin-bottom: 2em;
@@ -143,35 +139,22 @@ input[type="radio"]:checked:hover {
 /* ANIMATION    */
 
 .poll-q_bg {
-  background-color: #d3dfff;
+  background-color: #dcdcdc;
+}
+
+.poll-q {
   width: 70%;
-  z-index: 20;
+}
+
+.poll-q-wrapper {
+  position: relative;
 }
 
 /* after submit pressed!! */
-/*
-.poll-submitted {
-  transform: translateY(400px);
-  transition: transform 500ms ease-in-out;
-}
-*/
 .no-display {
-  display: none;
+  visibility: hidden;
 }
 
 .yes-display {
-  display: inline-block;
+  visibility: visible;
 }
-/* POLL SUBMIT BUTTON */
-/* .pollBtn {
-  align-self: start;
-  text-transform: uppercase;
-
-  font-family: roboto-slab;
-  font-weight: 600;
-
-  border: 1px solid black;
-  border-radius: 1000px;
-  padding: 0.5em 1em;
-
-} */

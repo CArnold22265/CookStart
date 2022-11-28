@@ -34,6 +34,7 @@ module.exports = {
         bludark: "#001f74",
         blackish: "rgb(26,26,26)",
         whitish: "#f3f3f3",
+        grayComp: "#f5f5f5",
         PinkishAccent: "#e7003e",
         GreenAccent: "#3ee700",
         MainCompliment: "#E73500",
