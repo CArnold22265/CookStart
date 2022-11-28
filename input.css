@@ -80,19 +80,28 @@ p {
 
 /* POLL SECTION */
 
+.poll-flex {
+  position: relative;
+}
+
+/* POLL HEADING */
+.poll-question_heading {
+  margin-bottom: 1.5em;
+}
+
 /* CUSTOM RADIO BUTTONS */
 input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
   background-color: #f3f3f3;
-  color: black;
+  color: rgb(51 65 85);
   position: relative;
 
   width: 1.15em;
   height: 1.15em;
   border: 0.15em solid currentColor;
   border-radius: 50%;
-  transform: translateY(0.2em);
+  transform: translateY(0.17em);
   margin-right: 0.2em;
 
   /* display: grid;
@@ -116,6 +125,43 @@ input[type="radio"]:checked::before {
   transform: scale(1);
 }
 
+.poll-q-wrapper {
+  color: rgb(51 65 85);
+  border: 1px solid lightgrey;
+  padding: 0.5em 0 0.5em 0.2;
+  border-radius: 10px;
+  margin-bottom: 2em;
+}
+
+div .poll-q-wrapper:hover,
+input[type="radio"]:hover,
+input[type="radio"]:checked:hover {
+  color: black;
+  transition: color 500ms ease-in-out;
+}
+
+/* ANIMATION    */
+
+.poll-q_bg {
+  background-color: #d3dfff;
+  width: 70%;
+  z-index: 20;
+}
+
+/* after submit pressed!! */
+/*
+.poll-submitted {
+  transform: translateY(400px);
+  transition: transform 500ms ease-in-out;
+}
+*/
+.no-display {
+  display: none;
+}
+
+.yes-display {
+  display: inline-block;
+}
 /* POLL SUBMIT BUTTON */
 /* .pollBtn {
   align-self: start;

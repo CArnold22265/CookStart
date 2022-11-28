@@ -203,15 +203,15 @@
   
   <!-- CONTAINER -->
   <div class = "poll-question pt-11
-  main-wrap main-container md:w-4/5 mx-auto box-border xxl:w-4/6">
+  main-wrap main-container sm: w-5/6 md:w-4/5 mx-auto box-border xxl:w-4/6">
   
   <!-- BG & TEXT -->
     <form class="text-2xl">
   
   <!-- POLL CONTAINER  -->
-      <div class=" poll-wrap bg-whitish sm:mx-2 md:mx-0 p-4 rounded-2xl">
+      <div class="poll-wrap bg-whitish sm:mx-2 md:mx-0 p-4 rounded-2xl">
   <!-- POLL FLEXBOX -->
-      <div class ="h-96 poll-flex flex flex-col justify-between">
+      <div class ="z-1 h-auto poll-flex flex flex-col justify-between">
   
   <!-- POLL QUESTION -->
         <h3 class = "poll-question_heading  text-3xl font-medium font-robotoSlab ">
@@ -219,28 +219,35 @@
         </h3>
   <!-- POLL ANSWERS -->
         <!-- q1 -->
-        <div class ="poll-q-wrapper">
-          <input type="radio" name="radio" id="lessons" class="poll-q1">
-            <label class="inline-block text-gray-700" for="lessons">More lessons!</label>
+        <div class="ml-9 hidden" id="unhideQ1"> More lessons </div>
+        <div class ="poll-q-wrapper poll-q_bg">
+          
+          <input type="radio" name="radioPoll" id="lessons" class="poll-q1">
+            <label id="poll-q1_label" class="poll-submitted"  for="lessons">More lessons!</label>
         </div>
+      
         <!-- q2 -->
-        <div class="poll-q-wrapper">
-          <input type="radio" name="radio" id ="poll-recipes" class="poll-q2 ">
-            <label for="poll-recipes">Add more recipes!</label>
+        <div class="ml-9 hidden" id="unhideQ2"> Add more recipes! </div>
+        <div class="poll-q-wrapper poll-q_bg">
+          <input type="radio" name="radioPoll" id ="poll-recipes" class="poll-q2">
+            <label id ="poll-q2_label" class ="poll-submitted" for="poll-recipes">Add more recipes!</label>
         </div>
         <!-- q3 -->
-        <div class="poll-q-wrapper">
-          <input type="radio" name="radio" id ="poll-recipe-book" class="poll-q3">
-            <label for="poll-recipe-book">Add application for storing and converting recipes.</label>
+        <div class="ml-9 hidden" id="unhideQ3"> Add recipe book app.</div>
+        <div class="poll-q-wrapper poll-q_bg">
+          <input type="radio" name="radioPoll" id ="poll-recipe-book" class="poll-q3">
+            <label id ="poll-q3_label" for="poll-recipe-book" class="poll-submitted">Add recipe book app.</label>
         </div>
         <!-- q4 -->
-        <div class="poll-q-wrapper">
-          <input type="radio" name="radio" id="poll-users-sec" class="poll-q4">
-            <label for="poll-users-sec"> Allow users to submit recipes and lessons </label>
+        <div class="ml-9 hidden" id="unhideQ4"> Add a skills quiz. </div>
+        <div class="poll-q-wrapper poll-q_bg">
+          <input type="radio" name="radioPoll" id="poll-users-sec" class="poll-q4">
+            <label id ="poll-q4_label" for="poll-users-sec" class="poll-submitted"> Add a skills quiz.</label>
         </div>
         <!-- SUBMIT BUTTON -->
         <input type="button" id="pollBtn" 
-        class="inline-block cursor-pointer px-5 py-2.5 bg-transparent border border-blumain font-medium text-xs leading-tight tracking-widest rounded-full  shadow-md hover:bg-blumain hover:shadow-lg hover:text-blu100 focus:bg-blumain focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blu500 active:shadow-lg transition duration-150 ease-in-out pollBtn"  value="answer">
+        class="inline-block cursor-pointer w-32 px-1 
+        py-2.5  uppercase  bg-transparent border  font-medium text-xl leading-tight tracking-wider rounded-full  shadow-md hover:bg-slate-100 hover:shadow-lg hover:text-slate-700 focus:bg-slate-100 focus:shadow-xl focus:outline-none focus:ring-0 active:bg-slate-200 active:shadow-lg transition duration-300  ease-in-out pollBtn"  value="answer">
         
       </div> 
     </div>
