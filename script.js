@@ -37,6 +37,20 @@ const pollQ4Bg = document.getElementById("unhideQ4");
 //unhide bg array
 const pollBgs = [pollQ1Bg, pollQ2Bg, pollQ3Bg, pollQ4Bg];
 
+//// append under these wrappers
+const pWrap1 = document.getElementById("poll-q1-wrap");
+const pWrap2 = document.getElementById("poll-q2-wrap");
+const pWrap3 = document.getElementById("poll-q3-wrap");
+const pWrap4 = document.getElementById("poll-q4-wrap");
+
+//SECTION;
+////////CREATED DOM ELEMENTS//////////
+const divPoll1 = document.createElement("div");
+const divPoll2 = document.createElement("div");
+const divPoll3 = document.createElement("div");
+const divPoll4 = document.createElement("div");
+const pollQDivs = [divPoll1, divPoll2, divPoll3, divPoll4];
+
 const btnClicked = function (e) {
   e.preventDefault();
   console.log("CLICKED");
@@ -56,10 +70,16 @@ const addClass = function (arr, addClass) {
 const delClass = function (arr, delClass) {
   arr.map((el) => el.classList.remove(delClass));
 };
+/*
+1.) loop over array of pollQApps add: 
+divPoll[i].setAttribute("id", "dp1");
+divPoll[i].setAttribute("class", "pollColor");
+pWrap[i].append(e)
+console.log
+3.)loop over array of new div elements and set them to have a style of width = percentageArr[i]
 
-/* 1.)fix above bug develop function that removes a class from every item in an array
- */
-
+ 
+*/
 //SECTION
 let pollAnswers = [23, 37, 14, 19];
 let percentages = [];
@@ -72,18 +92,24 @@ const pollAnswersSum = function () {
 pollAnswersSum();
 
 //CALCULATE PERCENTAGE OF EACH VOTE
-const votePercent = function () {
-  return pollAnswers.map((a, i, array) => {
+const votePercent = function (arr) {
+  return arr.map((a, i, array) => {
     return Math.round((a / pollAnswersSum()) * 100);
   });
 };
-votePercent();
+
+////SECTION
+//ADDING CLASSES AND APPENDING poll graph bars
+const graphBars = function (arr) {
+  arr.map((e, i, arr) => {
+    e.setAttribute("id", `dp${i + 1}`);
+    e.setAttribute("class", "pollColor");
+  });
+};
 
 //POLL SUBMIT LISTENER
 pollSubmitBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  //Remove display of text
-  addClass(pollLabels, " no-display");
   //hide radio btns
   addClass(pollRadios, " no-display");
   //Add text above radios
@@ -91,21 +117,40 @@ pollSubmitBtn.addEventListener("click", function (e) {
   //unhide backgrounds from poll
   delClass(pollBgs, "no-display");
 
+  let percArr = "";
   //Update answers array, and percentages array
   for (let i = 0; i < pollRadios.length; i++) {
     if (pollRadios[i].checked) {
+      //UPDATE POLL ANSWERS ARRAY
       let currentV = pollAnswers.at(i);
       currentV++ + pollAnswers.splice(i, 1, currentV);
       pollAnswersSum();
-      votePercent();
+      //Call func updating percentage of votes array
+      votePercent(pollAnswers);
+      console.log(votePercent(pollAnswers), pollAnswers);
+
+      pollLabels.map((el) => {
+        el.remove();
+      });
+      graphBars(pollQDivs);
+      pWrap1.append(divPoll1);
+      pWrap2.append(divPoll2);
+      pWrap3.append(divPoll3);
+      pWrap4.append(divPoll4);
     }
+    percArr = votePercent(pollAnswers);
+    //spanHi.style.color = "green";
   }
-  //calc percentage of each vote
-  console.log(pollAnswersSum());
-  console.log(votePercent());
-  // percentages = pollAnswers.map((num, i, arr) => {
-  //   (num / sum) * 100;
+  // pollLabels.map((el) => {
+  //   el.remove();
   // });
+  // graphBars(pollQDivs);
+  // pWrap1.append(divPoll1);
+  // pWrap2.append(divPoll2);
+  // pWrap3.append(divPoll3);
+  // pWrap4.append(divPoll4);
+
+  //spanBye.remove(); //completely removes the element from html
 });
 
 const clickedRadio = function (rad) {

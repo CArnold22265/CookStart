@@ -137,9 +137,11 @@ input[type="radio"]:checked:hover {
 }
 
 /* ANIMATION    */
-
-.poll-q_bg {
-  background-color: #dcdcdc;
+.pollColor {
+  display: inline-block;
+  background-color: red;
+  width: 90%;
+  height: 1em;
 }
 
 .poll-q {

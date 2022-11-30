@@ -1099,8 +1099,11 @@ input[type="radio"]:checked:hover {
 
 /* ANIMATION    */
 
-.poll-q_bg {
-  background-color: #dcdcdc;
+.pollColor {
+  display: inline-block;
+  background-color: red;
+  width: 90%;
+  height: 1em;
 }
 
 .poll-q {
@@ -1119,11 +1122,6 @@ input[type="radio"]:checked:hover {
 
 .yes-display {
   visibility: visible;
-}
-
-.poll-submitted::after {
-  background-color: red;
-  width: 100%;
 }
 
 .hover\:bg-blumain:hover{
