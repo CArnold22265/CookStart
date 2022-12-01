@@ -139,7 +139,8 @@ input[type="radio"]:checked:hover {
 /* ANIMATION    */
 .pollColor {
   display: inline-block;
-  background-color: red;
+  background-color: #da8ee7;
+
   width: 90%;
   height: 1em;
 }
@@ -149,7 +150,7 @@ input[type="radio"]:checked:hover {
 }
 
 .poll-wrap {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: #7600bc 0px 5px 15px;
 }
 
 .poll-q-wrapper {
