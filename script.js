@@ -100,12 +100,13 @@ const votePercent = function (arr) {
 
 ////SECTION
 //ADDING CLASSES AND APPENDING poll graph bars
-const graphBars = function (arr) {
-  arr.map((e, i, arr) => {
+const graphBars = function (arr1, arr2) {
+  arr1.map((e, i, arr) => {
     e.setAttribute("id", `dp${i + 1}`);
     e.setAttribute("class", "pollColor");
   });
 };
+//adding widths equal to poll answers percentage
 
 //POLL SUBMIT LISTENER
 pollSubmitBtn.addEventListener("click", function (e) {
@@ -133,24 +134,17 @@ pollSubmitBtn.addEventListener("click", function (e) {
         el.remove();
       });
       graphBars(pollQDivs);
+      //four divs keep the size the same during click
       pWrap1.append(divPoll1);
       pWrap2.append(divPoll2);
       pWrap3.append(divPoll3);
       pWrap4.append(divPoll4);
     }
+    // UPDATE VORE PERCENTAGE ARRAY
     percArr = votePercent(pollAnswers);
-    //spanHi.style.color = "green";
-  }
-  // pollLabels.map((el) => {
-  //   el.remove();
-  // });
-  // graphBars(pollQDivs);
-  // pWrap1.append(divPoll1);
-  // pWrap2.append(divPoll2);
-  // pWrap3.append(divPoll3);
-  // pWrap4.append(divPoll4);
 
-  //spanBye.remove(); //completely removes the element from html
+    // SET WIDTHS OF BARS
+  }
 });
 
 const clickedRadio = function (rad) {
