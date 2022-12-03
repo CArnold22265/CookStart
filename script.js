@@ -117,6 +117,7 @@ pollSubmitBtn.addEventListener("click", function (e) {
   addClass(unhideVals, " yes-display");
   //unhide backgrounds from poll
   delClass(pollBgs, "no-display");
+  //remove submit button
 
   let percArr = "";
   //Update answers array, and percentages array
@@ -133,7 +134,7 @@ pollSubmitBtn.addEventListener("click", function (e) {
       pollLabels.map((el) => {
         el.remove();
       });
-      graphBars(pollQDivs);
+      console.log(graphBars(pollQDivs));
       //four divs keep the size the same during click
       pWrap1.append(divPoll1);
       pWrap2.append(divPoll2);
@@ -144,6 +145,13 @@ pollSubmitBtn.addEventListener("click", function (e) {
     percArr = votePercent(pollAnswers);
 
     // SET WIDTHS OF BARS
+    for (let i = 0; i < pollQDivs.length; i++) {
+      pollQDivs[i].style.transition = "Width,2S";
+      pollQDivs[i].style.width = `${percArr[i]}%`;
+      console.log(pollQDivs[i]);
+
+      //spanHi.style.color = "green";
+    }
   }
 });
 

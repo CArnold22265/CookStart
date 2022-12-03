@@ -976,7 +976,7 @@ p {
 
 .card {
   padding: 1rem;
-  width: 20rem;
+  width: 19rem;
   height: 28rem;
   border-radius: 15px;
   background-color: #f3f3f3;
@@ -1101,8 +1101,7 @@ input[type="radio"]:checked:hover {
 
 .pollColor {
   display: inline-block;
-  background-color: #da8ee7;
-  width: 90%;
+  background-color: #d3d3d3;
   height: 1em;
 }
 
