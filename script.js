@@ -146,11 +146,10 @@ pollSubmitBtn.addEventListener("click", function (e) {
 
     // SET WIDTHS OF BARS
     for (let i = 0; i < pollQDivs.length; i++) {
-      pollQDivs[i].style.transition = "Width,2S";
       pollQDivs[i].style.width = `${percArr[i]}%`;
       console.log(pollQDivs[i]);
 
-      //spanHi.style.color = "green";
+      //transition attempt
     }
   }
 });

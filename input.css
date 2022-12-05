@@ -141,6 +141,9 @@ input[type="radio"]:checked:hover {
   display: inline-block;
   background-color: #d3d3d3;
   height: 1em;
+  width: 0px;
+
+  transition: width 10.9s;
 }
 
 .poll-q {
