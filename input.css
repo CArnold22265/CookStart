@@ -86,7 +86,7 @@ p {
 
 /* POLL HEADING */
 .poll-question_heading {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 /* CUSTOM RADIO BUTTONS */
@@ -94,7 +94,7 @@ input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
   background-color: #f3f3f3;
-  color: rgb(51 65 85);
+  color: #37383d;
   position: relative;
 
   width: 1.15em;
@@ -112,7 +112,7 @@ input[type="radio"]::before {
   border-radius: 50%;
   transform: scale(0);
   transition: 100ms transform ease-in;
-  box-shadow: inset 1em 1em black;
+  box-shadow: inset 1em 1em #37383d;
   position: absolute;
   top: 3px;
   right: 3px;
@@ -123,7 +123,7 @@ input[type="radio"]:checked::before {
 }
 
 .poll-q-wrapper {
-  color: rgb(51 65 85);
+  color: #37383d;
   padding: 0.5em 0 0.5em 0.2;
   border-radius: 10px;
   margin-bottom: 2em;
@@ -133,14 +133,14 @@ div .poll-q-wrapper:hover,
 input[type="radio"]:hover,
 input[type="radio"]:checked:hover {
   color: black;
-  transition: color 500ms ease-in-out;
+  transition: color 200ms ease-in;
 }
 
 /* ANIMATION    */
 .pollColor {
   display: inline-block;
-  background-color: #d3d3d3;
-  height: 1em;
+  background-color: #5e89ff;
+  height: 0.5em;
   width: 0px;
 
   transition: width 10.9s;
@@ -151,7 +151,10 @@ input[type="radio"]:checked:hover {
 }
 
 .poll-wrap {
-  box-shadow: #7600bc 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.2) 0px 4px 6px -2px;
+  padding: 2em 1em;
+  color: #37383d;
 }
 
 .poll-q-wrapper {
