@@ -143,17 +143,13 @@ input[type="radio"]:checked:hover {
   height: 0.5em;
   width: 0px;
 
-  transition: width 10.9s;
-}
-
-.poll-q {
-  width: 100%;
+  transition: width 1s ease-in-out;
 }
 
 .poll-wrap {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.2) 0px 4px 6px -2px;
-  padding: 2em 1em;
+  padding: 2em 3em;
   color: #37383d;
 }
 
@@ -164,6 +160,10 @@ input[type="radio"]:checked:hover {
 /* after submit pressed!! */
 .no-display {
   visibility: hidden;
+}
+
+.no-vis {
+  display: none;
 }
 
 .yes-display {

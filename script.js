@@ -30,19 +30,19 @@ const unhideVal4 = document.getElementById("unhideQ4");
 const unhideVals = [unhideVal1, unhideVal2, unhideVal3, unhideVal4];
 
 ////UNHIDE BACKGROUNDS
-const pollQ1Bg = document.getElementById("unhideQ1");
-const pollQ2Bg = document.getElementById("unhideQ2");
-const pollQ3Bg = document.getElementById("unhideQ3");
-const pollQ4Bg = document.getElementById("unhideQ4");
+const pollQ1After = document.getElementById("unhideQ1");
+const pollQ2After = document.getElementById("unhideQ2");
+const pollQ3After = document.getElementById("unhideQ3");
+const pollQ4After = document.getElementById("unhideQ4");
 //unhide bg array
-const pollBgs = [pollQ1Bg, pollQ2Bg, pollQ3Bg, pollQ4Bg];
+const pollLabelsAfter = [pollQ1After, pollQ2After, pollQ3After, pollQ4After];
 
 //// append under these wrappers
 const pWrap1 = document.getElementById("poll-q1-wrap");
 const pWrap2 = document.getElementById("poll-q2-wrap");
 const pWrap3 = document.getElementById("poll-q3-wrap");
 const pWrap4 = document.getElementById("poll-q4-wrap");
-
+const divWraps = [pWrap1, pWrap2, pWrap3, pWrap4];
 //SECTION;
 ////////CREATED DOM ELEMENTS//////////
 const divPoll1 = document.createElement("div");
@@ -50,6 +50,20 @@ const divPoll2 = document.createElement("div");
 const divPoll3 = document.createElement("div");
 const divPoll4 = document.createElement("div");
 const pollQDivs = [divPoll1, divPoll2, divPoll3, divPoll4];
+// span containing poll percentages //BUG
+const perc1 = document.createElement("span");
+perc1.classList.add("pollpercentage");
+const perc2 = document.createElement("span");
+perc2.classList.add("pollpercentage");
+const perc3 = document.createElement("span");
+perc3.classList.add("pollpercentage");
+const perc4 = document.createElement("span");
+perc4.classList.add("pollpercentage");
+const percArrValues = [perc1, perc2, perc3, perc4];
+
+// const perc2 = document.createElement("span");
+// const perc3 = document.createElement("span");
+// const perc4 = document.createElement("span");
 
 const btnClicked = function (e) {
   e.preventDefault();
@@ -100,55 +114,56 @@ const votePercent = function (arr) {
 
 ////SECTION
 //ADDING CLASSES AND APPENDING poll graph bars
-const graphBars = function (arr1, arr2) {
-  arr1.map((e, i, arr) => {
-    e.setAttribute("id", `dp${i + 1}`);
-    e.setAttribute("class", "pollColor");
-  });
-};
+const graphBars = pollQDivs.map((e, i, arr) => {
+  e.setAttribute("id", `dp${i + 1}`);
+  e.setAttribute("class", "pollColor");
+});
+console.log(graphBars);
+
 //adding widths equal to poll answers percentage
 
 //POLL SUBMIT LISTENER
 pollSubmitBtn.addEventListener("click", function (e) {
   e.preventDefault();
   //hide radio btns
-  addClass(pollRadios, " no-display");
+  addClass(pollRadios, " no-vis");
   //Add text above radios
   addClass(unhideVals, " yes-display");
-  //unhide backgrounds from poll
-  delClass(pollBgs, "no-display");
+  //unhide labels on click
+  delClass(pollLabelsAfter, "no-display");
+  //HIDES DEFAULT POLL LABELS
+  pollLabels.map((el) => {
+    el.remove();
+  });
+  //Adding poll bars to result
+  //pWrap1.append(divPoll1);
+  // pWrap2.append(divPoll2);
+  // pWrap3.append(divPoll3);
+  // pWrap4.append(divPoll4);
   //remove submit button
 
   let percArr = "";
   //Update answers array, and percentages array
   for (let i = 0; i < pollRadios.length; i++) {
+    divWraps[i].append(pollQDivs[i]);
     if (pollRadios[i].checked) {
       //UPDATE POLL ANSWERS ARRAY
       let currentV = pollAnswers.at(i);
       currentV++ + pollAnswers.splice(i, 1, currentV);
       pollAnswersSum();
-      //Call func updating percentage of votes array
-      votePercent(pollAnswers);
+      // UPDATE VOTE PERCENTAGE ARRAY
+      percArr = votePercent(pollAnswers);
+      //REMOVE POLL SUBMIT BTN
+      pollSubmitBtn.remove();
 
-      //HIDES DEFAULT POLL LABELS
-      pollLabels.map((el) => {
-        el.remove();
-      });
-      console.log(graphBars(pollQDivs));
-      //four divs keep the size the same during click
-      pWrap1.append(divPoll1);
-      pWrap2.append(divPoll2);
-      pWrap3.append(divPoll3);
-      pWrap4.append(divPoll4);
+      //insert vote percentage into dom..
+      percArrValues[i].innerText = `${percArr[i]}%`;
+      pollLabelsAfter[i].insertAdjacentElement("afterbegin", percArrValues[i]);
+      //give each pollbg bar a width
     }
-    // UPDATE VORE PERCENTAGE ARRAY
-    percArr = votePercent(pollAnswers);
-
-    // SET WIDTHS OF BARS
-    for (let i = 0; i < pollQDivs.length; i++) {
-      pollQDivs[i].style.width = `${percArr[i]}%`;
-      console.log(pollQDivs[i]);
-    }
+    pollQDivs[i].style.width = `${percArr[i]}%`;
+    console.log(percArr);
+    console.log(document.querySelectorAll(".pollColor"));
   }
 });
 
