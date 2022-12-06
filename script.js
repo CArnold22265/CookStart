@@ -129,8 +129,8 @@ pollSubmitBtn.addEventListener("click", function (e) {
       pollAnswersSum();
       //Call func updating percentage of votes array
       votePercent(pollAnswers);
-      console.log(votePercent(pollAnswers), pollAnswers);
 
+      //HIDES DEFAULT POLL LABELS
       pollLabels.map((el) => {
         el.remove();
       });
@@ -148,8 +148,6 @@ pollSubmitBtn.addEventListener("click", function (e) {
     for (let i = 0; i < pollQDivs.length; i++) {
       pollQDivs[i].style.width = `${percArr[i]}%`;
       console.log(pollQDivs[i]);
-
-      //transition attempt
     }
   }
 });
