@@ -56,6 +56,20 @@ p {
 }
 
 /* -------------------------------------------------------- LESSONS CSS ----------------------------------------*/
+.all-lessons__wrapper {
+  background-color: #37383d;
+}
+
+.lesson-wrapper {
+  background-color: #f3f3f3;
+  margin: 2em;
+}
+
+.lesson-wrapper p,
+.lesson-wrapper h3 {
+  margin-bottom: 1rem;
+}
+
 .accent-heading {
   font-size: 2rem;
   font-family: "roboto slab";
@@ -78,7 +92,7 @@ p {
   color: ;
 }
 
-/* POLL SECTION */
+/* POLL SECTION ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .poll-flex {
   position: relative;
