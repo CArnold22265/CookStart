@@ -58,7 +58,9 @@ p {
 }
 
 /* -------------------------------------------------------- LESSONS CSS ----------------------------------------*/
-
+.lessons {
+  background-color: #ffffff;
+}
 .lesson-wrapper {
   background-color: #f3f3f3;
 }
@@ -82,7 +84,6 @@ p {
 .lesson-heading {
   font-family: "permanent marker";
   line-height: 1.3;
-  font-size: 3rem;
   color: #37383d;
 
   letter-spacing: 0.13em;
@@ -90,7 +91,6 @@ p {
 
 .accent-heading {
   display: inline-block;
-  font-size: 2rem;
   font-family: "roboto slab";
   font-weight: 300;
   color: #e70030;
