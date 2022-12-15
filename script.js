@@ -172,7 +172,7 @@ pollSubmitBtn.addEventListener("click", function (e) {
   });
 
   pollQDivs.map((e, i) => {
-    e.style.width = `${percArr[i]}%`;
+    e.style.width = `${percArr[i] * 1.5}%`;
   });
 
   //   //insert vote percentage into dom..
