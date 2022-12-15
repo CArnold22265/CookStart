@@ -202,3 +202,12 @@ clickedRadio(pollQ3Radio);
 clickedRadio(pollQ4Radio);
 
 // rad.checked
+///////////////////TODO/////////////////
+/*
+1.) Rescale css classes on nav, main h1, and lesson 2
+2.) figure out lesson design pattern, sizing, etc
+3.) Impliment smooth scroll between lessons
+4.) Finish typing lessons
+5.) enter valid email modal on poll?
+6.) add recipes
+*/
