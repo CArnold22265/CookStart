@@ -614,6 +614,10 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mb-7{
+  margin-bottom: 1.75rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -1238,6 +1242,10 @@ input[type="radio"]:checked:hover {
     margin: 0px;
   }
 
+  .sm\:mb-2{
+    margin-bottom: 0.5rem;
+  }
+
   .sm\:flex{
     display: flex;
   }
@@ -1258,6 +1266,16 @@ input[type="radio"]:checked:hover {
   .sm\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
@@ -1347,6 +1365,11 @@ input[type="radio"]:checked:hover {
   .md\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:transition-all{
