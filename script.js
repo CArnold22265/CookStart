@@ -206,8 +206,11 @@ clickedRadio(pollQ4Radio);
 /*
 1.) Rescale css classes on nav, main h1, and lesson 2
 2.) figure out lesson design pattern, sizing, etc
-3.) Impliment smooth scroll between lessons
-4.) Finish typing lessons
+3.) Impliment smooth scroll between lessons, use event delegation...
+4.) Finish typing lessons section
 5.) enter valid email modal on poll?
 6.) add recipes
+7.) too many map methods check all variable arrays and individual variables, switch arrays to document.querySelectorAll('.')
+8.) maybe instead of maps where you dont need the index, run a for each loop because a map is unneccessary
+
 */
