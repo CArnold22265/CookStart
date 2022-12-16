@@ -614,10 +614,6 @@ video {
   margin-bottom: 1.25rem;
 }
 
-.mb-7{
-  margin-bottom: 1.75rem;
-}
-
 .box-border{
   box-sizing: border-box;
 }
@@ -745,10 +741,6 @@ video {
   padding: 0.75rem;
 }
 
-.p-2{
-  padding: 0.5rem;
-}
-
 .py-7{
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
@@ -794,17 +786,8 @@ video {
   padding-right: 0.25rem;
 }
 
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .pr-4{
   padding-right: 1rem;
-}
-
-.pb-4{
-  padding-bottom: 1rem;
 }
 
 .pb-10{
@@ -1242,12 +1225,17 @@ input[type="radio"]:checked:hover {
     margin: 0px;
   }
 
-  .sm\:mb-2{
-    margin-bottom: 0.5rem;
+  .sm\:my-5{
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
   }
 
   .sm\:flex{
     display: flex;
+  }
+
+  .sm\:h-1\/5{
+    height: 20%;
   }
 
   .sm\:flex-col{
@@ -1258,14 +1246,9 @@ input[type="radio"]:checked:hover {
     padding: 0.5rem;
   }
 
-  .sm\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .sm\:text-lg{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  .sm\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .sm\:text-xl{
@@ -1273,9 +1256,14 @@ input[type="radio"]:checked:hover {
     line-height: 1.75rem;
   }
 
-  .sm\:text-3xl{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  .sm\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -1324,6 +1312,10 @@ input[type="radio"]:checked:hover {
     display: flex;
   }
 
+  .md\:h-auto{
+    height: auto;
+  }
+
   .md\:w-4\/5{
     width: 80%;
   }
@@ -1340,8 +1332,17 @@ input[type="radio"]:checked:hover {
     align-items: center;
   }
 
+  .md\:justify-center{
+    justify-content: center;
+  }
+
   .md\:border-b-0{
     border-bottom-width: 0px;
+  }
+
+  .md\:object-cover{
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .md\:p-7{
@@ -1362,14 +1363,14 @@ input[type="radio"]:checked:hover {
     line-height: 1;
   }
 
-  .md\:text-3xl{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
   .md\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .md\:transition-all{
@@ -1397,9 +1398,18 @@ input[type="radio"]:checked:hover {
     flex-direction: row;
   }
 
+  .lg\:justify-between{
+    justify-content: space-between;
+  }
+
   .lg\:py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+  }
+
+  .lg\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
   }
 }
 
