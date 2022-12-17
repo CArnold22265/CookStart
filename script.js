@@ -167,41 +167,15 @@ pollSubmitBtn.addEventListener("click", function (e) {
     e.innerText = `${percArr[i]}%`;
   });
   //insert span
-  pollLabelsAfter.map((e, i, arr) => {
+  pollLabelsAfter.map((e, i) => {
     e.insertAdjacentElement("afterbegin", percArrValues[i]);
   });
 
-  pollQDivs.map((e, i) => {
+  pollQDivs.forEach((e, i) => {
     e.style.width = `${percArr[i] * 1.5}%`;
   });
-
-  //   //insert vote percentage into dom..
-  //   percArrValues[i].innerText = `${percArr[i]}%`;
-  //   pollLabelsAfter[i].insertAdjacentElement("afterbegin", percArrValues[i]);
-
-  //   pollQDivs[i].style.width = `${percArr[i]}%`;
-  //   //give each pollbg bar a widt
-  // }  {
-  //   percArrValues[i].innerText = `${percArr[i]}%`;
-  //   pollLabelsAfter[i].insertAdjacentElement("afterbegin", percArrValues[i]);
-
-  //   pollQDivs[i].style.width = `${percArr[i]}%`;
 });
 
-const clickedRadio = function (rad) {
-  rad.addEventListener("click", function () {
-    console.log(`${rad} was clicked`, rad.checked);
-  });
-};
-
-//clickedRadio(pollQ2);
-
-clickedRadio(pollQ1Radio);
-clickedRadio(pollQ2Radio);
-clickedRadio(pollQ3Radio);
-clickedRadio(pollQ4Radio);
-
-// rad.checked
 ///////////////////TODO/////////////////
 /*
 1.) Rescale css classes on nav, main h1, and lesson 2
@@ -214,3 +188,7 @@ clickedRadio(pollQ4Radio);
 8.) maybe instead of maps where you dont need the index, run a for each loop because a map is unneccessary
 
 */
+
+////practice on the poll
+
+console.log(pollSubmitBtn.parentElement);

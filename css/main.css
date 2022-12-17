@@ -737,10 +737,6 @@ video {
      object-fit: cover;
 }
 
-.p-3{
-  padding: 0.75rem;
-}
-
 .py-7{
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
@@ -823,11 +819,6 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .font-medium{
@@ -1225,17 +1216,8 @@ input[type="radio"]:checked:hover {
     margin: 0px;
   }
 
-  .sm\:my-5{
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-  }
-
   .sm\:flex{
     display: flex;
-  }
-
-  .sm\:h-1\/5{
-    height: 20%;
   }
 
   .sm\:flex-col{
@@ -1260,11 +1242,6 @@ input[type="radio"]:checked:hover {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
-
-  .sm\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
 }
 
 @media (min-width: 968px){
@@ -1286,11 +1263,6 @@ input[type="radio"]:checked:hover {
     margin-right: auto;
   }
 
-  .md\:my-5{
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-  }
-
   .md\:mx-1{
     margin-left: 0.25rem;
     margin-right: 0.25rem;
@@ -1310,10 +1282,6 @@ input[type="radio"]:checked:hover {
 
   .md\:flex{
     display: flex;
-  }
-
-  .md\:h-auto{
-    height: auto;
   }
 
   .md\:w-4\/5{
@@ -1405,11 +1373,6 @@ input[type="radio"]:checked:hover {
   .lg\:py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-
-  .lg\:text-5xl{
-    font-size: 3rem;
-    line-height: 1;
   }
 }
 
