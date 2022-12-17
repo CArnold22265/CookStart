@@ -189,6 +189,19 @@ pollSubmitBtn.addEventListener("click", function (e) {
 
 */
 
-////practice on the poll
+//SECTION//practice on the poll
 
-console.log(pollSubmitBtn.parentElement);
+//selects the flexbox containing the poll..
+//console.log(pollSubmitBtn.parentElement);
+
+//selects last radio btn
+//console.log(pollSubmitBtn.closest("input"));
+
+//seleced wrapper sibling on radio number 4
+console.log(pollSubmitBtn.previousElementSibling);
+
+//selects all siblings, including the button as HTML COLLECTION...
+console.log(pollSubmitBtn.parentElement.children);
+
+//selects all siblings, including the button as an array
+console.log([...pollSubmitBtn.parentElement.children]);
