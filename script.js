@@ -146,7 +146,7 @@ pollSubmitBtn.addEventListener("click", function (e) {
   for (let i = 0; i < pollRadios.length; i++) {
     divWraps[i].append(pollQDivs[i]);
   }
-  //BUG
+
   //change % array
   for (let i = 0; i < pollRadios.length; i++) {
     //change % array
