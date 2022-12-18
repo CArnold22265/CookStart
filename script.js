@@ -25,10 +25,8 @@ const unhideVal1 = document.getElementById("unhideQ1");
 const unhideVal2 = document.getElementById("unhideQ2");
 const unhideVal3 = document.getElementById("unhideQ3");
 const unhideVal4 = document.getElementById("unhideQ4");
-
 //UNHIDE ARRAY
 const unhideVals = [unhideVal1, unhideVal2, unhideVal3, unhideVal4];
-
 ////UNHIDE BACKGROUNDS
 const pollQ1After = document.getElementById("unhideQ1");
 const pollQ2After = document.getElementById("unhideQ2");
@@ -36,13 +34,17 @@ const pollQ3After = document.getElementById("unhideQ3");
 const pollQ4After = document.getElementById("unhideQ4");
 //unhide bg array
 const pollLabelsAfter = [pollQ1After, pollQ2After, pollQ3After, pollQ4After];
-
 //// append under these wrappers
 const pWrap1 = document.getElementById("poll-q1-wrap");
 const pWrap2 = document.getElementById("poll-q2-wrap");
 const pWrap3 = document.getElementById("poll-q3-wrap");
 const pWrap4 = document.getElementById("poll-q4-wrap");
 const divWraps = [pWrap1, pWrap2, pWrap3, pWrap4];
+//DEFAULT EMPTY STRING FOR ARRAY PERCENTAGE ONCLICK
+let percArr = "";
+//inital poll answer values
+let pollAnswers = [23, 37, 14, 19];
+let percentages = [];
 //SECTION;
 ////////CREATED DOM ELEMENTS//////////
 
@@ -67,42 +69,39 @@ const perc4 = document.createElement("span");
 perc4.classList.add("pollpercentage");
 const percArrValues = [perc1, perc2, perc3, perc4];
 
-// const perc2 = document.createElement("span");
-// const perc3 = document.createElement("span");
-// const perc4 = document.createElement("span");
-
-const btnClicked = function (e) {
-  e.preventDefault();
-  console.log("CLICKED");
+////SECTION///EXTERNAL FUNCTION VARIABLES///////////////
+//percentagevalue
+const pollPercentageText = function () {
+  percArrValues.forEach((e, i) => {
+    e.innerText = `${percArr[i]}%`;
+  });
 };
-
+//span holding percentage
+const pollPercSpan = function () {
+  pollLabelsAfter.forEach((e, i) => {
+    e.insertAdjacentElement("afterbegin", percArrValues[i]);
+  });
+};
+//bars inserted in poll
+const pollValueBars = function () {
+  pollQDivs.forEach((e, i) => {
+    e.style.width = `${percArr[i] * 1.5}%`;
+  });
+};
 //ADD A CLASS FUNCTION
 const addClass = function (arr, addClass) {
   const newV = [];
-
   arr.map((el) => {
     newV.push((el.className += addClass));
   });
 };
 
 //REMOVE A CLASS FUNCTION
-//BUG
 const delClass = function (arr, delClass) {
   arr.map((el) => el.classList.remove(delClass));
 };
-/*
-1.) loop over array of pollQApps add: 
-divPoll[i].setAttribute("id", "dp1");
-divPoll[i].setAttribute("class", "pollColor");
-pWrap[i].append(e)
-console.log
-3.)loop over array of new div elements and set them to have a style of width = percentageArr[i]
 
- 
-*/
 //SECTION
-let pollAnswers = [23, 37, 14, 19];
-let percentages = [];
 const sum = pollAnswers.reduce((acc, cur) => acc + cur, 0);
 
 //////Calculate initial sum of poll answers
@@ -119,13 +118,6 @@ const votePercent = function (arr) {
 };
 
 ////SECTION
-//ADDING CLASSES AND APPENDING poll graph bars
-// const graphBars = pollQDivs.map((e, i, arr) => {
-//   e.setAttribute("id", `dp${i + 1}`);
-//   e.setAttribute("class", "pollColor");
-// });
-
-//adding widths equal to poll answers percentage
 
 //POLL SUBMIT LISTENER
 pollSubmitBtn.addEventListener("click", function (e) {
@@ -141,7 +133,6 @@ pollSubmitBtn.addEventListener("click", function (e) {
     el.remove();
   });
 
-  let percArr = "";
   //add background class first, no width
   for (let i = 0; i < pollRadios.length; i++) {
     divWraps[i].append(pollQDivs[i]);
@@ -149,9 +140,7 @@ pollSubmitBtn.addEventListener("click", function (e) {
 
   //change % array
   for (let i = 0; i < pollRadios.length; i++) {
-    //change % array
     if (pollRadios[i].checked) {
-      console.log(pollRadios[i].checked);
       let currentV = pollAnswers.at(i);
       currentV++ + pollAnswers.splice(i, 1, currentV);
       pollAnswersSum();
@@ -161,19 +150,12 @@ pollSubmitBtn.addEventListener("click", function (e) {
       pollSubmitBtn.remove();
     }
   }
-  //insert text into span showing percentage voted for
-  //BUG store them as external values, then just call them in the event listener
-  percArrValues.forEach((e, i) => {
-    e.innerText = `${percArr[i]}%`;
-  });
-  //insert span
-  pollLabelsAfter.forEach((e, i) => {
-    e.insertAdjacentElement("afterbegin", percArrValues[i]);
-  });
+  // inserts text containing poll results
+  pollPercentageText();
+  //insert span around text so inline
+  pollPercSpan();
   //set width of poll bars
-  pollQDivs.forEach((e, i) => {
-    e.style.width = `${percArr[i] * 1.5}%`;
-  });
+  pollValueBars();
 });
 
 ///////////////////TODO/////////////////
@@ -186,6 +168,7 @@ pollSubmitBtn.addEventListener("click", function (e) {
 6.) add recipes
 7.) too many map methods check all variable arrays and individual variables, switch arrays to document.querySelectorAll('.')
 8.) maybe instead of maps where you dont need the index, run a for each loop because a map is unneccessary
+9.) add an element under poll for when no radio button is selected on click...
 
 */
 
