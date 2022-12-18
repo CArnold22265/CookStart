@@ -159,18 +159,18 @@ pollSubmitBtn.addEventListener("click", function (e) {
       percArr = votePercent(pollAnswers);
       //REMOVE POLL SUBMIT BTN
       pollSubmitBtn.remove();
-      console.log(percArr);
     }
   }
   //insert text into span showing percentage voted for
-  percArrValues.map((e, i, arr) => {
+  //BUG store them as external values, then just call them in the event listener
+  percArrValues.forEach((e, i) => {
     e.innerText = `${percArr[i]}%`;
   });
   //insert span
-  pollLabelsAfter.map((e, i) => {
+  pollLabelsAfter.forEach((e, i) => {
     e.insertAdjacentElement("afterbegin", percArrValues[i]);
   });
-
+  //set width of poll bars
   pollQDivs.forEach((e, i) => {
     e.style.width = `${percArr[i] * 1.5}%`;
   });
