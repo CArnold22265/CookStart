@@ -8,10 +8,9 @@ const pollQ3Radio = document.getElementById("poll-recipe-book");
 const pollQ4Radio = document.getElementById("poll-users-sec");
 //poll submit btn
 const pollSubmitBtn = document.querySelector(".pollBtn");
-
 // radio button array
 const pollRadios = [pollQ1Radio, pollQ2Radio, pollQ3Radio, pollQ4Radio];
-const radioButtons = document.querySelectorAll('input[name="radioPoll"]');
+
 //Labels
 const pollQ1Label = document.getElementById("poll-q1_label");
 const pollQ2Label = document.getElementById("poll-q2_label");
@@ -58,7 +57,7 @@ const graphBars = pollQDivs.map((e, i, arr) => {
   e.setAttribute("class", "pollColor");
 });
 
-// span containing poll percentages //BUG
+// span containing poll percentages
 const perc1 = document.createElement("span");
 perc1.classList.add("pollpercentage");
 const perc2 = document.createElement("span");
@@ -69,6 +68,11 @@ const perc4 = document.createElement("span");
 perc4.classList.add("pollpercentage");
 const percArrValues = [perc1, perc2, perc3, perc4];
 
+/////////////BUG//////////////
+const span = document.createElement("span");
+span.classList.add("bigfont");
+span.innerText = "PLEASE choose an option.";
+console.log(span.innerText);
 ////SECTION///EXTERNAL FUNCTION VARIABLES///////////////
 //percentagevalue
 const pollPercentageText = function () {
@@ -117,28 +121,8 @@ const votePercent = function (arr) {
   });
 };
 
-////SECTION
-
-//POLL SUBMIT LISTENER
-pollSubmitBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  //hide radio btns
-  addClass(pollRadios, " no-vis");
-  //Add text above radios
-  addClass(unhideVals, " yes-display");
-  //unhide labels on click
-  delClass(pollLabelsAfter, "no-display");
-  //HIDES DEFAULT POLL LABELS
-  pollLabels.map((el) => {
-    el.remove();
-  });
-
-  //add background class first, no width
-  for (let i = 0; i < pollRadios.length; i++) {
-    divWraps[i].append(pollQDivs[i]);
-  }
-
-  //change % array
+//change % array
+const updatePercArr = function () {
   for (let i = 0; i < pollRadios.length; i++) {
     if (pollRadios[i].checked) {
       let currentV = pollAnswers.at(i);
@@ -146,29 +130,71 @@ pollSubmitBtn.addEventListener("click", function (e) {
       pollAnswersSum();
       // UPDATE VOTE PERCENTAGE ARRAY
       percArr = votePercent(pollAnswers);
-      //REMOVE POLL SUBMIT BTN
-      pollSubmitBtn.remove();
     }
   }
-  // inserts text containing poll results
-  pollPercentageText();
-  //insert span around text so inline
-  pollPercSpan();
-  //set width of poll bars
-  pollValueBars();
+};
+////SECTION
+
+//POLL SUBMIT LISTENER
+pollSubmitBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const flexWarning = document.getElementById("poll-parent");
+  //Radio button not clicked...
+
+  const radioCheckedArr = pollRadios
+    .map((e) => {
+      return e.checked;
+    })
+    .includes(true);
+
+  if (radioCheckedArr == false) {
+    console.log(pollSubmitBtn);
+    //flexWarning = Poll flexbox, see html
+    flexWarning.append(span);
+  } else {
+    span.classList.add("no-vis");
+
+    //hide radio btns
+    addClass(pollRadios, " no-vis");
+    //Add text above radios
+    addClass(unhideVals, " yes-display");
+    //unhide labels on click
+    delClass(pollLabelsAfter, "no-display");
+    //HIDES DEFAULT POLL LABELS
+    pollLabels.map((el) => {
+      el.remove();
+    });
+
+    //add background class first, no width
+    for (let i = 0; i < pollRadios.length; i++) {
+      divWraps[i].append(pollQDivs[i]);
+    }
+
+    //change % array
+    updatePercArr();
+    //REMOVE POLL SUBMIT BTN
+    pollSubmitBtn.remove();
+    // inserts text containing poll results
+    pollPercentageText();
+    //insert span around text so inline
+    pollPercSpan();
+    //set width of poll bars
+    pollValueBars();
+  }
 });
 
 ///////////////////TODO/////////////////
 /*
-1.) Rescale css classes on nav, main h1, and lesson 2
-2.) figure out lesson design pattern, sizing, etc
+1.) add caprese image to section 2
+2.) Hide hero image on smaller screens...
 3.) Impliment smooth scroll between lessons, use event delegation...
 4.) Finish typing lessons section
 5.) enter valid email modal on poll?
-6.) add recipes
-7.) too many map methods check all variable arrays and individual variables, switch arrays to document.querySelectorAll('.')
-8.) maybe instead of maps where you dont need the index, run a for each loop because a map is unneccessary
-9.) add an element under poll for when no radio button is selected on click...
+6.) add 2 lessons
+7.) switch arrays to document.querySelectorAll('.')
+8.) position element better under poll for when no radio button is selected on click...
+9.) Build skills quiz
 
 */
 
@@ -181,10 +207,10 @@ pollSubmitBtn.addEventListener("click", function (e) {
 //console.log(pollSubmitBtn.closest("input"));
 
 //seleced wrapper sibling on radio number 4
-console.log(pollSubmitBtn.previousElementSibling);
+//console.log(pollSubmitBtn.previousElementSibling);
 
 //selects all siblings, including the button as HTML COLLECTION...
-console.log(pollSubmitBtn.parentElement.children);
+//console.log(pollSubmitBtn.parentElement.children);
 
 //selects all siblings, including the button as an array
-console.log([...pollSubmitBtn.parentElement.children]);
+//console.log([...pollSubmitBtn.parentElement.children]);
