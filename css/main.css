@@ -549,6 +549,10 @@ video {
   }
 }
 
+.relative{
+  position: relative;
+}
+
 .m-3{
   margin: 0.75rem;
 }
@@ -1001,6 +1005,10 @@ p {
   display: inline-block;
 }
 
+.lesson-image {
+  shape-outside: circle();
+}
+
 /* POLL SECTION ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .poll-flex {
@@ -1116,7 +1124,7 @@ input[type="radio"]:checked:hover {
   color: #e73500;
   position: absolute;
   top: 50%;
-  right: 50%;
+  left: 35%;
 }
 
 .hover\:bg-blumain:hover{
@@ -1206,12 +1214,24 @@ input[type="radio"]:checked:hover {
 }
 
 @media (min-width: 640px){
+  .sm\:float-none{
+    float: none;
+  }
+
   .sm\:m-0{
     margin: 0px;
   }
 
   .sm\:flex{
     display: flex;
+  }
+
+  .sm\:h-72{
+    height: 18rem;
+  }
+
+  .sm\:w-96{
+    width: 24rem;
   }
 
   .sm\:flex-col{
@@ -1235,6 +1255,10 @@ input[type="radio"]:checked:hover {
 }
 
 @media (min-width: 968px){
+  .md\:float-right{
+    float: right;
+  }
+
   .md\:m-2{
     margin: 0.5rem;
   }
@@ -1278,8 +1302,16 @@ input[type="radio"]:checked:hover {
     height: 100%;
   }
 
+  .md\:h-auto{
+    height: auto;
+  }
+
   .md\:w-4\/5{
     width: 80%;
+  }
+
+  .md\:w-auto{
+    width: auto;
   }
 
   .md\:flex-row{
@@ -1346,6 +1378,14 @@ input[type="radio"]:checked:hover {
   .lg\:my-0{
     margin-top: 0px;
     margin-bottom: 0px;
+  }
+
+  .lg\:h-auto{
+    height: auto;
+  }
+
+  .lg\:w-auto{
+    width: auto;
   }
 
   .lg\:flex-row{
