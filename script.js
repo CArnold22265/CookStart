@@ -72,7 +72,7 @@ const percArrValues = [perc1, perc2, perc3, perc4];
 const span = document.createElement("span");
 span.classList.add("bigfont");
 span.innerText = "PLEASE choose an option.";
-console.log(span.innerText);
+
 ////SECTION///EXTERNAL FUNCTION VARIABLES///////////////
 //percentagevalue
 const pollPercentageText = function () {
