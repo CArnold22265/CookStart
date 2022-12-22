@@ -186,16 +186,15 @@ pollSubmitBtn.addEventListener("click", function (e) {
 
 ///////////////////TODO/////////////////
 /*
-1.) add caprese image to section 2
+1.) create seperate css & js file for the skills page
 2.) Hide hero image on smaller screens...
-3.) Impliment smooth scroll between lessons, use event delegation...
+3.) Impliment navigation through lessons add datasets to lessons
 4.) Finish typing lessons section
 5.) enter valid email modal on poll?
 6.) add 2 lessons
-7.) switch arrays to document.querySelectorAll('.')
-8.) position element better under poll for when no radio button is selected on click...
-9.) Build skills quiz
-
+7.) clean up stored variables
+8.) shave lol
+9.) remove add class function && call classlist.add || classlist.remove on each set that requires it
 */
 
 //SECTION//practice on the poll
