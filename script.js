@@ -195,6 +195,7 @@ pollSubmitBtn.addEventListener("click", function (e) {
 7.) clean up stored variables
 8.) shave lol
 9.) remove add class function && call classlist.add || classlist.remove on each set that requires it
+10.) learn debugger and hover tooltip
 */
 
 //SECTION//practice on the poll
