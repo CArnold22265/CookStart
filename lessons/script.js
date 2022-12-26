@@ -7,21 +7,28 @@ const lessons = document.querySelectorAll(".lesson");
 const arrowBtnLeft = document.getElementById("arrow-left");
 const arrowBtnRight = document.getElementById("arrow-right");
 const eventParent = document.querySelector(".les-parent");
+
+let index = 0;
+let currentLesson = [...lessons][index];
+
+console.log(lessons);
+/////////SECTION Right Arrow event listener
 arrowBtnRight.addEventListener("click", function (e) {
-  const next = Array.from(lessons, (el, i, arr) => {
-    el.classList.add("hidden");
-  });
-  //Array.from([1, 2, 3], (x) => x + x);
-  console.log(next);
-  // next.forEach((element) => {});
-  // (el, i, arr) => {
-  //   if (!arr.at(i).classList.contains("hidden")) {
-  //     arr.at(i).classList.add("hidden");
-  //     arr.at(i++).classList.remove("hidden");
-  //     if (i != arr.length - 1) {
-  //       next[i + 1].classList.remove("hidden");
-  //     }
-  //     return;
+  e.preventDefault();
+  lessons[index].classList.add("hidden");
+  console.log(lessons[index].nextElementSibling);
+  lessons[index].nextElementSibling.classList.remove("hidden");
+  index++;
+  console.log(lessons.length);
+});
+
+arrowBtnLeft.addEventListener("click", function (e) {
+  e.preventDefault();
+  arrowBtnRight.removeEventListener;
+  lessons[index].classList.add("hidden");
+  console.log(lessons[index].previousElementSibling);
+  lessons[index].previousElementSibling.classList.remove("hidden");
+  index--;
 });
 
 // function handleClickRight(event) {
