@@ -29,6 +29,7 @@ arrowBtnLeft.addEventListener("click", function (e) {
   console.log(lessons[index].previousElementSibling);
   lessons[index].previousElementSibling.classList.remove("hidden");
   index--;
+  console.log(" clicked");
 });
 
 // function handleClickRight(event) {
