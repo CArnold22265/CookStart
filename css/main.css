@@ -561,16 +561,16 @@ video {
   position: relative;
 }
 
+.top-1\/2{
+  top: 50%;
+}
+
 .left-2{
   left: 0.5rem;
 }
 
 .right-2{
   right: 0.5rem;
-}
-
-.top-1\/2{
-  top: 50%;
 }
 
 .m-3{
@@ -656,10 +656,6 @@ video {
   box-sizing: border-box;
 }
 
-.block{
-  display: block;
-}
-
 .inline-block{
   display: inline-block;
 }
@@ -670,10 +666,6 @@ video {
 
 .flex{
   display: flex;
-}
-
-.inline-grid{
-  display: inline-grid;
 }
 
 .hidden{
@@ -715,10 +707,6 @@ video {
 
 .flex-wrap{
   flex-wrap: wrap;
-}
-
-.place-content-around{
-  place-content: space-around;
 }
 
 .items-center{
@@ -1044,11 +1032,20 @@ p {
 
 /* -------------------------------------------------------- LESSONS CSS ----------------------------------------*/
 
-.all-lessons__wrapper section p {
+.lessons__content {
+  display: none;
+}
+
+.lessons__content--active {
+  display: flex;
+  flex-direction: column;
+}
+
+.lessons section p {
   line-height: 1.5em;
 }
 
-.all-lessons__wrapper h5 {
+.lessons h5 {
   display: inline-block;
   opacity: 0.75;
   font-family: "roboto slab";
@@ -1058,7 +1055,7 @@ p {
   text-transform: uppercase;
 }
 
-.lesson-heading {
+.lessons-header {
   font-family: "roboto slab";
   font-weight: 400;
   text-transform: uppercase;
@@ -1300,8 +1297,12 @@ input[type="radio"]:checked:hover {
     position: static;
   }
 
-  .sm\:right-2{
-    right: 0.5rem;
+  .sm\:mt-0{
+    margin-top: 0px;
+  }
+
+  .sm\:ml-2{
+    margin-left: 0.5rem;
   }
 
   .sm\:flex{
@@ -1337,10 +1338,6 @@ input[type="radio"]:checked:hover {
 }
 
 @media (min-width: 968px){
-  .md\:fixed{
-    position: fixed;
-  }
-
   .md\:float-right{
     float: right;
   }
@@ -1462,21 +1459,33 @@ input[type="radio"]:checked:hover {
 }
 
 @media (min-width: 1224px){
-  .lg\:top-1\/2{
-    top: 50%;
+  .lg\:fixed{
+    position: fixed;
   }
 
-  .lg\:right-2{
-    right: 0.5rem;
+  .lg\:top-1\/2{
+    top: 50%;
   }
 
   .lg\:left-2{
     left: 0.5rem;
   }
 
+  .lg\:right-2{
+    right: 0.5rem;
+  }
+
   .lg\:my-0{
     margin-top: 0px;
     margin-bottom: 0px;
+  }
+
+  .lg\:mt-24{
+    margin-top: 6rem;
+  }
+
+  .lg\:ml-auto{
+    margin-left: auto;
   }
 
   .lg\:h-auto{

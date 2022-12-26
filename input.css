@@ -58,11 +58,19 @@ p {
 }
 
 /* -------------------------------------------------------- LESSONS CSS ----------------------------------------*/
-.all-lessons__wrapper section p {
+.lessons__content {
+  display: none;
+}
+.lessons__content--active {
+  display: flex;
+  flex-direction: column;
+}
+
+.lessons section p {
   line-height: 1.5em;
 }
 
-.all-lessons__wrapper h5 {
+.lessons h5 {
   display: inline-block;
   opacity: 0.75;
   font-family: "roboto slab";
@@ -71,7 +79,7 @@ p {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.lesson-heading {
+.lessons-header {
   font-family: "roboto slab";
   font-weight: 400;
   text-transform: uppercase;

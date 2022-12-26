@@ -1,36 +1,32 @@
 "use strict";
+const lessons = document.querySelectorAll(".lessons__content");
 
-const lesson1 = document.querySelector(".lesson-1");
-const lesson2 = document.querySelector(".lesson-2");
-const lesson3 = document.querySelector(".lesson-3");
-const lessons = document.querySelectorAll(".lesson");
-const arrowBtnLeft = document.getElementById("arrow-left");
-const arrowBtnRight = document.getElementById("arrow-right");
+const arrowBtnContainer = document.querySelector(".lessons__button-container");
+console.log(arrowBtnContainer);
+const arrowBtnLeft = document.querySelector(".lesson-arrow__btn--left");
+const arrowBtnRight = document.querySelector(".lesson-arrow__btn--right");
+console.log(arrowBtnRight, arrowBtnLeft);
 const eventParent = document.querySelector(".les-parent");
 
-let index = 0;
-let currentLesson = [...lessons][index];
-
-console.log(lessons);
 /////////SECTION Right Arrow event listener
-arrowBtnRight.addEventListener("click", function (e) {
-  e.preventDefault();
-  lessons[index].classList.add("hidden");
-  console.log(lessons[index].nextElementSibling);
-  lessons[index].nextElementSibling.classList.remove("hidden");
-  index++;
-  console.log(lessons.length);
-});
+// arrowBtnRight.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   lessons[index].classList.add("hidden");
+//   console.log(lessons[index].nextElementSibling);
+//   lessons[index].nextElementSibling.classList.remove("hidden");
+//   index++;
+//   console.log(lessons.length);
+// });
 
-arrowBtnLeft.addEventListener("click", function (e) {
-  e.preventDefault();
-  arrowBtnRight.removeEventListener;
-  lessons[index].classList.add("hidden");
-  console.log(lessons[index].previousElementSibling);
-  lessons[index].previousElementSibling.classList.remove("hidden");
-  index--;
-  console.log(" clicked");
-});
+// arrowBtnLeft.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   arrowBtnRight.removeEventListener;
+//   lessons[index].classList.add("hidden");
+//   console.log(lessons[index].previousElementSibling);
+//   lessons[index].previousElementSibling.classList.remove("hidden");
+//   index--;
+//   console.log(" clicked");
+// });
 
 // function handleClickRight(event) {
 //   event.preventDefault();
