@@ -7,7 +7,61 @@ const arrowBtnLeft = document.querySelector(".lesson-arrow__btn--left");
 const arrowBtnRight = document.querySelector(".lesson-arrow__btn--right");
 console.log(arrowBtnRight, arrowBtnLeft);
 const eventParent = document.querySelector(".les-parent");
+let total = 0;
 
+let activeLesson = 0;
+console.log(lessons.length);
+const calcNewTotal = function (e) {
+  console.log(e.clicked);
+};
+calcNewTotal();
+arrowBtnRight.addEventListener("click", function (e) {
+  if (total === lessons.length - 1) return;
+
+  total++;
+
+  activeLesson = [...lessons].at(`${total}`);
+
+  //change total
+
+  console.log(total);
+  lessons.forEach((les) => {
+    les.classList.remove("lessons__content--active");
+    les.classList.add("lessons-op");
+  });
+
+  //show active
+
+  activeLesson.classList.add("lessons__content--active");
+
+  console.log(activeLesson.style.opacity);
+});
+const totalL = arrowBtnLeft.addEventListener("click", function (e) {
+  //change total
+  console.log(total);
+  if (total > 0) {
+    total === total - 1;
+  }
+  activeLesson = [...lessons].at(`${total}`);
+  console.log(total);
+  console.log(activeLesson);
+  if ((total = 0)) return;
+
+  lessons.forEach((les) => {
+    les.classList.remove("lessons__content--active");
+  });
+  //show active
+  activeLesson.classList.add("lessons__content--active");
+  activeLesson.style.opacity = "1";
+  console.log(total);
+});
+
+//STUDY GUard clause
+/*
+const clicked = e.target.closest('.parent-tab');
+//guard clause stops the res of the code from being executed if a condition is not met
+if (!clicked) return
+*/
 /////////SECTION Right Arrow event listener
 // arrowBtnRight.addEventListener("click", function (e) {
 //   e.preventDefault();
