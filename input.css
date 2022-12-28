@@ -58,18 +58,20 @@ p {
 }
 
 /* -------------------------------------------------------- LESSONS CSS ----------------------------------------*/
+.opacity-zero {
+  opacity: 0;
+}
 .lessons__content {
   display: none;
 }
-.lessons-op {
-  opacity: 0;
-}
-.lessons__content--active {
-  opacity: 1;
-  display: block;
-  transition: opacity 2s ease-in;
-}
 
+.lessons__content--active {
+  display: block;
+  transition: opacity 3s ease-in-out;
+}
+.lessons-opacity {
+  opacity: 1;
+}
 .lessons section p {
   line-height: 1.5em;
 }

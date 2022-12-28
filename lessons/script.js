@@ -9,23 +9,23 @@ console.log(arrowBtnRight, arrowBtnLeft);
 const eventParent = document.querySelector(".les-parent");
 let total = 0;
 
-let activeLesson = 0;
-
 arrowBtnRight.addEventListener("click", function (e) {
   if (total === lessons.length - 1) return;
 
   total++;
-
+  let activeLesson = [...lessons].at(`${total}`);
   activeLesson = [...lessons].at(`${total}`);
 
   //change total
   lessons.forEach((les) => {
     les.classList.remove("lessons__content--active");
+    les.classList.add(".opacity-zero");
   });
 
   //show active
-
   activeLesson.classList.add("lessons__content--active");
+  activeLesson.classList.remove(".opacity-zero");
+  console.log(activeLesson, total);
 });
 
 arrowBtnLeft.addEventListener("click", function (e) {
@@ -33,14 +33,16 @@ arrowBtnLeft.addEventListener("click", function (e) {
   //change total
 
   total == total--;
-
-  activeLesson = [...lessons].at(`${total}`);
+  let activeLesson = [...lessons].at(`${total}`);
 
   lessons.forEach((les) => {
     les.classList.remove("lessons__content--active");
   });
   //show active
+  activeLesson.classList.add(".lessons-opacity");
   activeLesson.classList.add("lessons__content--active");
+
+  console.log(activeLesson, total);
   //activeLesson.style(opacity) = '1';
 });
 
@@ -55,7 +57,7 @@ if (!clicked) return
 //   e.preventDefault();
 //   lessons[index].classList.add("hidden");
 //   console.log(lessons[index].nextElementSibling);
-//   lessons[index].nextElementSibling.classList.remove("hidden");
+//   lessons[index].nextElementSibling.classList.removecxd("hidden");
 //   index++;
 //   console.log(lessons.length);
 // });
