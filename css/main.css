@@ -549,10 +549,6 @@ video {
   }
 }
 
-.absolute{
-  position: absolute;
-}
-
 .relative{
   position: relative;
 }
@@ -630,6 +626,10 @@ video {
 
 .mb-11{
   margin-bottom: 2.75rem;
+}
+
+.mt-0{
+  margin-top: 0px;
 }
 
 .box-border{
@@ -1013,13 +1013,11 @@ p {
 
 .lessons-op {
   opacity: 0;
-  transition: opacity 2s ease-in;
 }
 
 .lessons__content--active {
-  display: flex;
-  flex-direction: column;
   opacity: 1;
+  display: block;
   transition: opacity 2s ease-in;
 }
 
@@ -1364,8 +1362,8 @@ input[type="radio"]:checked:hover {
     margin-left: 1.25rem;
   }
 
-  .md\:block{
-    display: block;
+  .md\:inline{
+    display: inline;
   }
 
   .md\:flex{
