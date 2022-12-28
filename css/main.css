@@ -1003,21 +1003,13 @@ p {
 
 /* -------------------------------------------------------- LESSONS CSS ----------------------------------------*/
 
-.opacity-zero {
-  opacity: 0;
-}
-
 .lessons__content {
   display: none;
 }
 
 .lessons__content--active {
   display: block;
-  transition: opacity 3s ease-in-out;
-}
-
-.lessons-opacity {
-  opacity: 1;
+  transition: opacity 2s ease-in-out;
 }
 
 .lessons section p {
