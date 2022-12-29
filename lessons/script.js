@@ -19,12 +19,14 @@ arrowBtnRight.addEventListener("click", function (e) {
   //change total
   lessons.forEach((les) => {
     les.classList.remove("lessons__content--active");
-    les.classList.add(".opacity-zero");
+    les.style.opacity = "0";
   });
 
   //show active
   activeLesson.classList.add("lessons__content--active");
-  activeLesson.classList.remove(".opacity-zero");
+  setTimeout(() => {
+    activeLesson.style.opacity = 1;
+  }, this.animationDelay + 20);
   console.log(activeLesson, total);
 });
 
@@ -37,10 +39,14 @@ arrowBtnLeft.addEventListener("click", function (e) {
 
   lessons.forEach((les) => {
     les.classList.remove("lessons__content--active");
+    les.style.opacity = "0";
   });
   //show active
-  activeLesson.classList.add(".lessons-opacity");
   activeLesson.classList.add("lessons__content--active");
+
+  setTimeout(() => {
+    activeLesson.style.opacity = 1;
+  }, this.animationDelay + 20);
 
   console.log(activeLesson, total);
   //activeLesson.style(opacity) = '1';

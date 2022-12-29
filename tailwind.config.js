@@ -29,6 +29,7 @@ module.exports = {
         blu200: "#ACC2FF",
         blu300: "#5E89ff",
         blu400: "#366CFF",
+        lightassblue: "#82eefd",
         blu500: "#0f50ff",
         blumain: "#003ee7",
         bludark: "#001f74",
