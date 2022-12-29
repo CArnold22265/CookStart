@@ -1,7 +1,11 @@
 "use strict";
-/////SECTION POLL VARIABLES
-//Radio buttons
 
+///SECTION nav
+const hamburgerBtn = document.querySelector(".burger__button");
+const nav = document.querySelector(".nav-wrap");
+
+///SECTION poll
+//Radio buttons
 const pollQ1Radio = document.getElementById("lessons");
 const pollQ2Radio = document.getElementById("poll-recipes");
 const pollQ3Radio = document.getElementById("poll-recipe-book");
@@ -92,20 +96,18 @@ const pollValueBars = function () {
     e.style.width = `${percArr[i] * 1.5}%`;
   });
 };
-//ADD A CLASS FUNCTION
-const addClass = function (arr, addClass) {
-  const newV = [];
-  arr.map((el) => {
-    newV.push((el.className += addClass));
-  });
-};
 
-//REMOVE A CLASS FUNCTION
-const delClass = function (arr, delClass) {
-  arr.map((el) => el.classList.remove(delClass));
-};
+//////////SECTION  Hamburger nav listen  ///////////
+hamburgerBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  nav.classList.remove("hidden");
+  nav.classList.add("absolute");
+  nav.style.position = "fixed";
+});
 
-//SECTION
+//BEGIN POLL FUNCTIONS
+///////////////////////////SECTION/////////////////////////
+
 const sum = pollAnswers.reduce((acc, cur) => acc + cur, 0);
 
 //////Calculate initial sum of poll answers
