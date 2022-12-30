@@ -16,7 +16,7 @@
   </head>
   <body class="relative">
    
-      <button class ="burger__button sticky md:hidden top-5 left-5">
+      <button class ="burger__button sticky md:hidden top-5 left-1">
         <div class="space-y-2 p-2 bg-white bg-opacity-60 opacity-7">
         <span class="block w-8 h-1 bg-bludark"></span>
         <span class="block w-8 h-1 bg-bludark"></span>
@@ -24,69 +24,62 @@
         </div>
       </button>
     
-    <div
-      class="nav-wrap main-wrap main-container md:w-4/5 mx-auto box-border xxl:w-4/6 relative hidden md:block"
-    >
+    
       <!-----------NAVIGATION-------------->
 
       <header
-        class="uppercase mx-2 md:mx-0 py-7 md:py-4 md:h-full font-robotoSlab text-l text-bludark  tracking-wide sm:bg-white hidden md:block"
+        class="nav-wrap uppercase font-robotoSlab text-l text-bludark tracking-wide hidden md:block bg-whitish bg-opacity-90 h-1/2 md:h-auto w-screen md:w-auto fixed md:relative top-0"
       >
         <nav
-          class=" nav md:flex  flex-col md:flex-row justify-between md:items-center"
+          class="py-2 md:my-0 my-9  md:w-4/5 md:mx-auto xxl:w-4/6"
         >
-          <!--------LEFT-SIDE------->
-          <div class=" md:flex flex-row items-center">
-            <div class="ml-1 md:ml-0 mb-3 md:mb-0 border-b-2 md:border-b-0">
+      
+          <div class=" flex flex-col md:flex-row items-center justify-start">
+            <div class="ml-1 md:ml-0 mt-7 md:mt-0 mb-5 md:mb-0 border-b-2 md:border-b-0 ext-white bg-bludark py-1 px-2 tracking-widest text-2xl font-marker font-semibold text-white">
               
-              <a
-                href="#"
-                class="text-white bg-bludark py-1 px-2 tracking-widest text-2xl font-marker"
-              >
                 CookStart
-              </a>
+              
             </div>
             <div
-              class="sm:flex sm:flex-col mb-3 md:mb-0 border-b-2 md:border-b-0 text-xl"
+              class=" mb-5 md:mb-0 border-b-2 md:border-b-0 border-lightassblue text-xl"
             >
               <a
                 href="#"
-                class="ml-1 md:ml-6 hover:text-black  md:transition-all md:ease-in md:duration-200"
+                class="nav__link ml-1 md:ml-6 hover:text-black  md:transition-all md:ease-in md:duration-200"
+              >
+                Home
+              </a>
+            </div>
+            <div
+              class=" mb-5 md:mb-0 border-b-2 md:border-b-0 border-lightassblue text-xl"
+            >
+              <a
+                href="#"
+                class="nav__link ml-1 md:ml-6 hover:text-black  md:transition-all md:ease-in md:duration-200"
               >
                 Lessons
               </a>
             </div>
             <div
-              class="sm:flex sm:flex-col mb-3 md:mb-0 border-b-2 md:border-b-0 text-xl"
+              class="mb-5 md:mb-0 border-b-2 md:border-b-0 text-xl border-lightassblue "
             >
               <a
                 href="#"
-                class="ml-1 md:ml-6 hover:text-black transition-all ease-in duration-200"
+                class="nav__link ml-1 md:ml-6 hover:text-black transition-all ease-in duration-200"
               >
-                my recipes</a
+                recipes</a
               >
             </div>
           </div>
-        
-          <!----------RIGHT-SIDE-------->
-
-          <div class="md:flex flex-row">
-            <a
-              href="#"
-              class="inline-block px-5 py-2.5 bg-transparent border border-blumain font-medium text-xs leading-tight tracking-widest rounded-full shadow-md hover:bg-bludark hover:shadow-lg hover:text-blu100 focus:bg-blumain focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blu500 active:shadow-lg transition duration-150 ease-in-out"
-            >
-              donate</a
-            >
-          </div>
         </nav>
       </header>
-    </div>
-     
+    
+   
 <!-- SECTION -->
     <!--------------HERO------------------------->
       <!-- hero container -->
-     <div class="main-container" >
-        <main class="w-full py-4 lg:my-0 my-9 md:w-4/5 md:mx-auto xxl:w-4/6 box-border">
+     <div class="main-container mt-11" >
+        <main class="w-full py-4 lg:my-0 my-9 md:w-4/5 md:mx-auto xxl:w-4/6">
        
           <!-- -----left-side------ -->
           
@@ -100,10 +93,10 @@
                     "
                   >
                     Practical 
-                    <span class="inline heading__outline">
+                    <span class="inline heading__outline-light">
                       lessons for
                     </span> Professional 
-                    <span class="inline heading__outline">
+                    <span class="inline heading__outline-light">
                       Cooks!
                     </span>
                   </h1>
@@ -143,18 +136,21 @@
   
 <!-- -------------BEGIN 3 CARD MODAL SEC----------------- -->
 
-  <section class="3-card bg-blackish pb-10">
+  <section class="3-card bg-white pb-10">
     <div class="3-card-cont w-full lg:py-6 py-9 md:w-4/5 md:mx-auto xxl:w-4/6 ">
 
+  
+      <div class =" flex flex-col lg:block justify-center items-center w-screen">
+        <h2 class="sm:text-3xl md:text-6xl xxl:text-7xl px-2 md:px-0  text-bludark border-solid border-y-lightassblue font-robotoSlab uppercase tracking-wide my-3 pr-4 xl:pr-0 ">
+          <span class="heading__outline-light"> 
+            Cookstart</span> 
+            Lessons
+        </h2>
+      </div>
 
-<h2 class="sm:text-3xl md:text-6xl xxl:text-7xl px-2  bg-blumain  text-gray-200 font-marker uppercase tracking-wide m-3 pr-4 xl:pr-0 ">Cookstart Lessons:
-
-</h2>
-      
-<ul class="flex flex-col md:flex-row justify-between  flex-wrap items-center md:items-start">
   
   <!---------------------------- card-1  -------------->
-  
+  <ul class="flex flex-col lg:flex-row justify-between  flex-wrap items-center ">
   <li class="card mb-5 md:mb-0">
     <a href="/lessons/index.html#lesson1">
     <div class="card-1">

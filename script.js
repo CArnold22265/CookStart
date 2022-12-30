@@ -100,9 +100,24 @@ const pollValueBars = function () {
 //////////SECTION  Hamburger nav listen  ///////////
 hamburgerBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  nav.classList.remove("hidden");
-  nav.classList.add("absolute");
-  nav.style.position = "fixed";
+  if (nav.classList.contains("nav-active")) {
+    nav.style.transform = "translateY(-100vh)";
+    setTimeout(() => {
+      nav.classList.remove("nav-active");
+    }, 1000);
+  } else {
+    nav.style.transform = "translateY(-100vh)";
+    nav.classList.add("nav-active");
+    //nav.classList.remove("hidden");
+    setTimeout(() => {
+      nav.style.transform = "translateY(0vh)";
+    }, this.animationDelay);
+  }
+});
+
+////lighten other nav items listener
+nav.addEventListener("click", function (e) {
+  console.log(e.target.closest("a"));
 });
 
 //BEGIN POLL FUNCTIONS
@@ -154,15 +169,18 @@ pollSubmitBtn.addEventListener("click", function (e) {
     console.log(pollSubmitBtn);
     //flexWarning = Poll flexbox, see html
     flexWarning.append(span);
+    return;
   } else {
     span.classList.add("no-vis");
 
     //hide radio btns
-    addClass(pollRadios, " no-vis");
+    pollRadios.forEach((e) => {
+      e.classList.add("no-vis");
+    });
     //Add text above radios
-    addClass(unhideVals, " yes-display");
+    unhideVals.forEach((e) => e.classList.remove("no-display"));
     //unhide labels on click
-    delClass(pollLabelsAfter, "no-display");
+    pollLabelsAfter.forEach((e) => e.classList.remove("no-display"));
     //HIDES DEFAULT POLL LABELS
     pollLabels.map((el) => {
       el.remove();

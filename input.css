@@ -14,12 +14,23 @@ p {
   font-size: 1rem;
   line-height: 1.4;
 }
+.burger__button {
+  z-index: 1000;
+}
 
-.heading__outline {
+.heading__outline-light {
   background: #43b0f1;
   color: white;
-
   display: inline-block;
+}
+.heading__outline-dark {
+  color: white;
+  background: #1e3d58;
+  display: inline-block;
+}
+.nav-active {
+  display: block;
+  transition: all 1s ease-in-out;
 }
 
 .main-container {
@@ -28,9 +39,9 @@ p {
 .card {
   padding: 1rem;
   width: 19rem;
-  height: 28rem;
-  border-radius: 15px;
-  background-color: #f3f3f3;
+  height: 25rem;
+
+  background-color: #e8eef1;
 
   cursor: pointer;
 }
@@ -170,6 +181,9 @@ input[type="radio"]:checked::before {
   transform: scale(1);
 }
 
+.no-vis {
+  display: hidden;
+}
 .poll-q-wrapper {
   color: #37383d;
   padding: 0.5em 0 0.5em 0.2;
