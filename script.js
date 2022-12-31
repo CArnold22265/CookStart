@@ -208,7 +208,7 @@ pollSubmitBtn.addEventListener("click", function (e) {
 /*
 1.) create seperate css & js file for the skills page
 2.) Hide hero image on smaller screens...
-3.) Impliment navigation through lessons add datasets to lessons
+3.) SET UP MODAL WHEN LESSON CLICKED FIRST PAGE, sm & md screen will have a slider effect, lg screen will have a bar above with current lessons displayed 
 4.) Finish typing lessons section
 5.) enter valid email modal on poll?
 6.) add 2 lessons

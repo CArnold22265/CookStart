@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body class="relative">
+  <body>
    
       <button class ="burger__button sticky md:hidden top-5 left-1">
         <div class="space-y-2 p-2 bg-white bg-opacity-60 opacity-7">
@@ -26,12 +26,12 @@
     
     
       <!-----------NAVIGATION-------------->
-
+ <!-- class="nav-wrap uppercase font-robotoSlab text-l text-bludark tracking-wide hidden md:block bg-whitish bg-opacity-90 h-fit md:h-auto w-screen md:w-full fixed md:relative top-0" -->
       <header
-        class="nav-wrap uppercase font-robotoSlab text-l text-bludark tracking-wide hidden md:block bg-whitish bg-opacity-90 h-1/2 md:h-auto w-screen md:w-auto fixed md:relative top-0"
+      class="nav-wrap uppercase font-robotoSlab text-l text-bludark tracking-wide hidden md:block bg-whitish bg-opacity-90 h-fit md:h-auto w-screen fixed md:relative top-0" 
       >
         <nav
-          class="py-2 md:my-0 my-9  md:w-4/5 md:mx-auto xxl:w-4/6"
+          class="py-3 md:my-0 my-9  md:w-3/4 md:mx-auto xxl:w-4/6"
         >
       
           <div class=" flex flex-col md:flex-row items-center justify-start">
@@ -83,9 +83,10 @@
        
           <!-- -----left-side------ -->
           
-          <div class="md:flex md:m-0 flex-col lg:flex-row md:justify-center lg:justify-between items-center">
-              
-            <ul class="md:flex flex-col m-3 pr-4 xl:pr-0 md:m-0  basis-full">
+          <div class="md:flex md:m-0 md:flex-row  justify-center items-center">
+           
+          
+            <ul class="md:flex flex-col xl:pr-0 mx-2 lg:m-0  basis-full">
                
               <li>
                   <h1
@@ -126,9 +127,10 @@
                 
                 </li>  
               </ul>
+              
           <!-------RIGHT-SIDE------->
-          <div class="sm:hidden md:block img-cont right-side basis-full max-w-fit">
-                <img src="images/hero.png" class="md:object-cover" /></img>
+          <div class="hidden md:inline-block img-cont right-side md:basis-2/3 lg:basis-1/3">
+                <img src="images/hero.png" class=object-cover /></img>
               </div>
           </div>
           </main>
@@ -137,21 +139,32 @@
 <!-- -------------BEGIN 3 CARD MODAL SEC----------------- -->
 
   <section class="3-card bg-white pb-10">
-    <div class="3-card-cont w-full lg:py-6 py-9 md:w-4/5 md:mx-auto xxl:w-4/6 ">
+    <div class="3-card-cont w-full lg:py-6 py-9  md:mx-auto md:w-4/5 xxl:w-4/6 ">
 
   
-      <div class =" flex flex-col lg:block justify-center items-center w-screen">
-        <h2 class="sm:text-3xl md:text-6xl xxl:text-7xl px-2 md:px-0  text-bludark border-solid border-y-lightassblue font-robotoSlab uppercase tracking-wide my-3 pr-4 xl:pr-0 ">
+      <div class =" flex flex-col lg:block justify-evenly items-center w-full h-fit mb-3">
+        <h2 class="sm:text-4xl  xxl:text-7xl px-2 lg:px-0  text-bludark border-solid font-robotoSlab uppercase tracking-wide my-0 h-40">
           <span class="heading__outline-light"> 
             Cookstart</span> 
             Lessons
         </h2>
+        <div class="slider__heading-wrapper hidden md:flex flex-row justify-around items-center w-4/5 mx-auto bg-blackish bg-opacity-10">
+          <h3 class="slider__heading text-3xl  xxl:text-7xl font-robotoSlab  my-0 text-bludark opacity-60" data-CardHeading="1" id="slider__heading-1">
+            Lesson 1
+          </h3>
+          <h3 class="slider__heading slider__heading-active text-3xl  xxl:text-7xl font-robotoSlab  my-0 text-bludark opacity-60" data-CardHeading="2" id="slider__heading-2">
+            Lesson 2
+          </h3>
+          <h3 class="slider__heading text-3xl  xxl:text-7xl font-robotoSlab  my-0 text-bludark opacity-60" data-CardHeading="3" id="slider__heading-3">
+            Lesson 3
+          </h3>
+        </div>
       </div>
 
   
   <!---------------------------- card-1  -------------->
   <ul class="flex flex-col lg:flex-row justify-between  flex-wrap items-center ">
-  <li class="card mb-5 md:mb-0">
+  <li class="card mb-5 md:mb-3"  data-CardContent="1">
     <a href="/lessons/index.html#lesson1">
     <div class="card-1">
       
@@ -166,7 +179,7 @@
   </a>
   </li>
   <!---------------------------- card-2  -------------->
-  <li class="card mb-5 md:mb-0 xxl:mx-10 md:mx-1">
+  <li class="card mb-5 md:mb-3 xxl:mx-10 lg:mx-1" data-CardContent="2">
     <a href="/lessons/index.html#lesson2">
     <div class="card-2">
       <h3 class="font-robotoSlab font-light text-xl tracking-wide"><b class="text-bludark">Lesson 2</b></h3>
@@ -180,7 +193,7 @@
   </a>
   </li>
   <!---------------------------- card-3  -------------->
-  <li class="card mb-5 md:mb-0">
+  <li class="card mb-5 md:mb-3"  data-CardContent="1">
     <a href="/lessons/index.html#lesson3">
     <div class="card-3">
       <h3 class="font-robotoSlab font-light text-xl tracking-wide"><b class="text-bludark">Lesson 3</b></h3>

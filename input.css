@@ -33,6 +33,13 @@ p {
   transition: all 1s ease-in-out;
 }
 
+.slider__heading-wrapper {
+  height: 4.5em;
+}
+
+.slider__heading-active {
+  opacity: 1;
+}
 .main-container {
   margin-bottom: 10;
 }
