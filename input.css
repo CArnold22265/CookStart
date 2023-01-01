@@ -119,7 +119,7 @@ p {
   text-transform: uppercase;
   line-height: 1.5;
   letter-spacing: 0.1em;
-  border-bottom: 2px solid #5e89ff;
+  border-bottom: 2px solid #057dcd;
 }
 
 .lesson-subheading {
@@ -127,7 +127,7 @@ p {
   font-weight: 300;
   line-height: 1.3;
   letter-spacing: 0.1em;
-  border-bottom: 1px solid #5e89ff;
+  border-bottom: 1px solid #057dcd;
 }
 
 .section-highlighter {
@@ -153,6 +153,7 @@ button {
 /* POLL HEADING */
 .poll-question_heading {
   margin-bottom: 1em;
+  color: #1e3d58;
 }
 
 /* CUSTOM RADIO BUTTONS */
@@ -160,7 +161,7 @@ input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
   background-color: #f3f3f3;
-  color: #37383d;
+  color: #1e3d58;
   position: relative;
 
   width: 1.15em;
@@ -178,7 +179,7 @@ input[type="radio"]::before {
   border-radius: 50%;
   transform: scale(0);
   transition: 100ms transform ease-in;
-  box-shadow: inset 1em 1em #37383d;
+  box-shadow: inset 1em 1em #1e3d58;
   position: absolute;
   top: 3px;
   right: 3px;
@@ -192,7 +193,7 @@ input[type="radio"]:checked::before {
   display: hidden;
 }
 .poll-q-wrapper {
-  color: #37383d;
+  color: #1e3d58;
   padding: 0.5em 0 0.5em 0.2;
   border-radius: 10px;
   margin-bottom: 2em;
@@ -208,7 +209,7 @@ input[type="radio"]:checked:hover {
 /* ANIMATION    */
 .pollColor {
   display: inline-block;
-  background-color: #5e89ff;
+  background-color: #057dcd;
   height: 0.5em;
   width: 0px;
 
@@ -241,7 +242,7 @@ input[type="radio"]:checked:hover {
 /*Poll percentage after click */
 .pollpercentage {
   font-weight: 500;
-  color: #37383d;
+  color: #1e3d58;
   font-family: "roboto";
   width: 3.5em;
   letter-spacing: 1.9px;
