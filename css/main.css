@@ -629,12 +629,12 @@ video {
   margin-top: 2.5rem;
 }
 
-.mt-2{
-  margin-top: 0.5rem;
-}
-
 .mb-2{
   margin-bottom: 0.5rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
 }
 
 .mt-7{
@@ -655,6 +655,10 @@ video {
 
 .mb-11{
   margin-bottom: 2.75rem;
+}
+
+.mb-1{
+  margin-bottom: 0.25rem;
 }
 
 .box-border{
@@ -817,13 +821,9 @@ video {
   background-color: rgb(30 61 88 / var(--tw-bg-opacity));
 }
 
-.bg-blackish{
+.bg-ltblumain{
   --tw-bg-opacity: 1;
-  background-color: rgb(26 26 26 / var(--tw-bg-opacity));
-}
-
-.bg-transparent{
-  background-color: transparent;
+  background-color: rgb(67 176 241 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-60{
@@ -832,10 +832,6 @@ video {
 
 .bg-opacity-90{
   --tw-bg-opacity: 0.9;
-}
-
-.bg-opacity-10{
-  --tw-bg-opacity: 0.1;
 }
 
 .object-cover{
@@ -1002,6 +998,11 @@ video {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
+.text-blu100{
+  --tw-text-opacity: 1;
+  color: rgb(205 229 245 / var(--tw-text-opacity));
+}
+
 .underline{
   text-decoration-line: underline;
 }
@@ -1053,6 +1054,8 @@ video {
 body {
   background: white;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 p {
@@ -1060,6 +1063,7 @@ p {
   color: rgb(55, 65, 81);
   font-size: 1rem;
   line-height: 1.4;
+  font-weight: 200;
 }
 
 .burger__button {
@@ -1158,9 +1162,9 @@ p {
 .lessons h5 {
   display: inline-block;
   opacity: 0.75;
-  font-family: "roboto slab";
-  border-bottom: 1px solid #acc2ff;
-  font-weight: 300;
+  font-family: "roboto";
+  //border-bottom: 1px solid #acc2ff;
+  font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -1178,8 +1182,9 @@ p {
   font-family: "roboto slab";
   font-weight: 300;
   line-height: 1.3;
-  letter-spacing: 0.1em;
+  //letter-spacing: 0.1em;
   border-bottom: 1px solid #057dcd;
+  text-transform: uppercase;
 }
 
 .section-highlighter {
@@ -1321,14 +1326,19 @@ input[type="radio"]:checked:hover {
   left: 35%;
 }
 
-.hover\:bg-blu200:hover{
+.hover\:bg-ltLtblue:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(155 203 235 / var(--tw-bg-opacity));
+  background-color: rgb(104 191 243 / var(--tw-bg-opacity));
 }
 
 .hover\:text-black:hover{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:shadow-lg:hover{
