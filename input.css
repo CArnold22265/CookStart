@@ -47,13 +47,16 @@ p {
   margin-bottom: 10;
 }
 .card {
-  padding: 1rem;
+  padding: 0 1rem;
   width: 19rem;
   height: 25rem;
 
-  background-color: #e8eef1;
+  background-color: white;
 
   cursor: pointer;
+
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.2) 0px 4px 6px -2px;
 }
 .card:hover {
   background-color: #e6f2fa;
