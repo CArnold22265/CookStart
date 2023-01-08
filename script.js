@@ -133,7 +133,7 @@ pollAnswersSum();
 
 //CALCULATE PERCENTAGE OF EACH VOTE
 const votePercent = function (arr) {
-  return arr.map((a, i, array) => {
+  return arr.map((a) => {
     return Math.round((a / pollAnswersSum()) * 100);
   });
 };
@@ -207,15 +207,18 @@ pollSubmitBtn.addEventListener("click", function (e) {
 ///////////////////TODO/////////////////
 /*
 1.) create seperate css & js file for the skills page
-2.) Hide hero image on smaller screens...
-3.) SET UP MODAL WHEN LESSON CLICKED FIRST PAGE, sm & md screen will have a slider effect, lg screen will have a bar above with current lessons displayed 
+2.) 
+3.) SET UP MODAL WHEN LESSON CLICKED FIRST PAGE 
+    3a.) modal should blur the background exit on any click outside the modal, exit when the x in top left of modal is clicked
 4.) Finish typing lessons section
 5.) enter valid email modal on poll?
 6.) add 2 lessons
-7.) clean up stored variables
-8.) shave lol
-9.) remove add class function && call classlist.add || classlist.remove on each set that requires it
-10.) learn debugger and hover tooltip
+7.) on lesson card mousein Use event delegation to add a blur to the cards that are not hovered, and grow the card that is hovered. remove class on mouseout.
+    7b.) modal should contain lesson title, the first paragraph of the lesson, and a link at the bottom with the text 'read more', or keep reading.
+      7c.)when the link is clicked, it should change the active lesson to the lesson reflected in the modal, adjust as needed.
+8.) 
+9.) 
+10.) learn debugger tooltip
 */
 
 //SECTION//practice on the poll
