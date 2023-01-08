@@ -1,4 +1,8 @@
 "use strict";
+///SECTION nav
+const hamburgerBtn = document.querySelector(".burger__button");
+const nav = document.querySelector(".nav-wrap");
+
 const lessons = document.querySelectorAll(".lessons__content");
 
 const arrowBtnContainer = document.querySelector(".lessons__button-container");
@@ -8,6 +12,28 @@ const arrowBtnRight = document.querySelector(".lesson-arrow__btn--right");
 console.log(arrowBtnRight, arrowBtnLeft);
 const eventParent = document.querySelector(".les-parent");
 let total = 0;
+
+hamburgerBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (nav.classList.contains("nav-active")) {
+    nav.style.transform = "translateY(-100vh)";
+    setTimeout(() => {
+      nav.classList.remove("nav-active");
+    }, 1000);
+  } else {
+    nav.style.transform = "translateY(-100vh)";
+    nav.classList.add("nav-active");
+    //nav.classList.remove("hidden");
+    setTimeout(() => {
+      nav.style.transform = "translateY(0vh)";
+    }, this.animationDelay);
+  }
+});
+
+////lighten other nav items listener
+nav.addEventListener("click", function (e) {
+  console.log(e.target.closest("a"));
+});
 
 arrowBtnRight.addEventListener("click", function (e) {
   if (total === lessons.length - 1) return;

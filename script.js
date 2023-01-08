@@ -45,6 +45,9 @@ const pWrap4 = document.getElementById("poll-q4-wrap");
 const divWraps = [pWrap1, pWrap2, pWrap3, pWrap4];
 //DEFAULT EMPTY STRING FOR ARRAY PERCENTAGE ONCLICK
 let percArr = "";
+//Modal elements
+const cardCont = document.querySelector(".cards");
+
 //inital poll answer values
 let pollAnswers = [23, 37, 14, 19];
 let percentages = [];
@@ -76,6 +79,38 @@ const percArrValues = [perc1, perc2, perc3, perc4];
 const span = document.createElement("span");
 span.classList.add("bigfont");
 span.innerText = "PLEASE choose an option.";
+
+///////////SECTION///MODAL CARD//////////
+function openModalOnClick(modalId, sectionId) {
+  // Get the modal and the section
+  var modal = document.getElementById(modalId);
+  var section = document.getElementById(sectionId);
+
+  // Add a click event listener to the section
+  card.addEventListener("click", function (event) {
+    // Get the clicked element
+    var clickedElement = event.target;
+
+    // Position the modal relative to the clicked element
+    var rect = clickedElement.getBoundingClientRect();
+    var x = rect.left + window.scrollX;
+    var y = rect.top + window.scrollY;
+    modal.style.left = x + "px";
+    modal.style.top = y + "px";
+
+    // Open the modal
+    modal.style.display = "block";
+  });
+}
+// To use this function, you would pass in the ID of the modal element and the ID of the section that contains the elements that should trigger the modal to open when clicked.
+
+// For example:
+
+// Copy code
+// openModalOnClick('myModal', 'mySection');
+// This would open the modal with the ID 'myModal' when any element within the section with the ID 'mySection' is clicked, and position the modal relative to the clicked element.
+
+// I hope this helps! Let me know if you have any questions or if you'd like to see any further examples.
 
 ////SECTION///EXTERNAL FUNCTION VARIABLES///////////////
 //percentagevalue
