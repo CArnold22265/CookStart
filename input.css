@@ -22,7 +22,7 @@ p {
 }
 
 .heading__outline-light {
-  background: #f96738;
+  background: #43b0f1;
   color: white;
   display: inline-block;
 }
@@ -90,7 +90,7 @@ p {
   line-height: 1.3;
   font-size: 3rem;
   font-family: "permanent marker";
-  background-color: #f95738;
+  background-color: #057dcd;
   color: #d3dfff;
   display: inline-block;
 }
@@ -262,7 +262,7 @@ input[type="radio"]:checked:hover {
   font-weight: 500;
   letter-spacing: 1.5px;
   line-height: 1.2;
-  color: #e73500;
+  color: #057dcd;
 
   position: absolute;
   top: 50%;

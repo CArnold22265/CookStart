@@ -81,27 +81,27 @@ span.classList.add("bigfont");
 span.innerText = "PLEASE choose an option.";
 
 ///////////SECTION///MODAL CARD//////////
-function openModalOnClick(modalId, sectionId) {
-  // Get the modal and the section
-  var modal = document.getElementById(modalId);
-  var section = document.getElementById(sectionId);
+// function openModalOnClick(modalId, sectionId) {
+//   // Get the modal and the section
+//   var modal = document.getElementById(modalId);
+//   var section = document.getElementById(sectionId);
 
-  // Add a click event listener to the section
-  card.addEventListener("click", function (event) {
-    // Get the clicked element
-    var clickedElement = event.target;
+//   // Add a click event listener to the section
+//   card.addEventListener("click", function (event) {
+//     // Get the clicked element
+//     var clickedElement = event.target;
 
-    // Position the modal relative to the clicked element
-    var rect = clickedElement.getBoundingClientRect();
-    var x = rect.left + window.scrollX;
-    var y = rect.top + window.scrollY;
-    modal.style.left = x + "px";
-    modal.style.top = y + "px";
+//     // Position the modal relative to the clicked element
+//     var rect = clickedElement.getBoundingClientRect();
+//     var x = rect.left + window.scrollX;
+//     var y = rect.top + window.scrollY;
+//     modal.style.left = x + "px";
+//     modal.style.top = y + "px";
 
-    // Open the modal
-    modal.style.display = "block";
-  });
-}
+//     // Open the modal
+//     modal.style.display = "block";
+//   });
+// }
 // To use this function, you would pass in the ID of the modal element and the ID of the section that contains the elements that should trigger the modal to open when clicked.
 
 // For example:
