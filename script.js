@@ -251,7 +251,7 @@ pollSubmitBtn.addEventListener("click", function (e) {
 7.) on lesson card mousein Use event delegation to add a blur to the cards that are not hovered, and grow the card that is hovered. remove class on mouseout.
     7b.) modal should contain lesson title, the first paragraph of the lesson, and a link at the bottom with the text 'read more', or keep reading.
       7c.)when the link is clicked, it should change the active lesson to the lesson reflected in the modal, adjust as needed.
-8.) 
+8.) store poll results in a database
 9.) 
 10.) learn debugger tooltip
 */
