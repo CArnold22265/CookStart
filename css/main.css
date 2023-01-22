@@ -599,19 +599,14 @@ video {
   margin-bottom: 1rem;
 }
 
-.my-0{
-  margin-top: 0px;
-  margin-bottom: 0px;
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
-}
-
-.mx-4{
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 .ml-2{
@@ -707,10 +702,6 @@ video {
   height: fit-content;
 }
 
-.h-40{
-  height: 10rem;
-}
-
 .h-auto{
   height: auto;
 }
@@ -727,10 +718,6 @@ video {
   width: 100%;
 }
 
-.w-4\/5{
-  width: 80%;
-}
-
 .w-32{
   width: 8rem;
 }
@@ -741,10 +728,6 @@ video {
 
 .cursor-pointer{
   cursor: pointer;
-}
-
-.flex-row{
-  flex-direction: row;
 }
 
 .flex-col{
@@ -769,14 +752,6 @@ video {
 
 .justify-between{
   justify-content: space-between;
-}
-
-.justify-around{
-  justify-content: space-around;
-}
-
-.justify-evenly{
-  justify-content: space-evenly;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
@@ -812,10 +787,6 @@ video {
 
 .border-b-2{
   border-bottom-width: 2px;
-}
-
-.border-solid{
-  border-style: solid;
 }
 
 .border-lightassblue{
@@ -857,20 +828,8 @@ video {
   --tw-bg-opacity: 0.6;
 }
 
-.bg-opacity-100{
-  --tw-bg-opacity: 1;
-}
-
 .bg-opacity-80{
   --tw-bg-opacity: 0.8;
-}
-
-.bg-opacity-50{
-  --tw-bg-opacity: 0.5;
-}
-
-.bg-opacity-10{
-  --tw-bg-opacity: 0.1;
 }
 
 .object-cover{
@@ -961,11 +920,6 @@ video {
   line-height: 2.5rem;
 }
 
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .font-semibold{
   font-weight: 600;
 }
@@ -1029,10 +983,6 @@ video {
 
 .underline{
   text-decoration-line: underline;
-}
-
-.opacity-60{
-  opacity: 0.6;
 }
 
 .shadow-md{
@@ -1338,8 +1288,6 @@ input[type="radio"]:checked:hover {
   letter-spacing: 1.9px;
 }
 
-/*----- BUG-- */
-
 .bigfont {
   font-family: "roboto slab";
   font-size: 1.875rem;
@@ -1350,6 +1298,18 @@ input[type="radio"]:checked:hover {
   position: absolute;
   top: 50%;
   left: 35%;
+}
+
+.modal {
+  position: absolute;
+  visibility: hidden;
+  border: 5px solid black;
+  height: 50vh;
+  width: 65vw;
+  top: 30%;
+  background-color: #f3f3f3;
+  z-index: 9001;
+  margin-bottom: 30%;
 }
 
 .hover\:bg-ltblumain:hover{
@@ -1431,11 +1391,6 @@ input[type="radio"]:checked:hover {
   .sm\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .sm\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 
   .sm\:text-lg{
@@ -1601,10 +1556,6 @@ input[type="radio"]:checked:hover {
     margin-left: auto;
   }
 
-  .lg\:block{
-    display: block;
-  }
-
   .lg\:h-auto{
     height: auto;
   }
@@ -1620,11 +1571,6 @@ input[type="radio"]:checked:hover {
   .lg\:py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-
-  .lg\:px-0{
-    padding-left: 0px;
-    padding-right: 0px;
   }
 }
 
