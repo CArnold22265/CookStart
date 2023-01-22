@@ -150,11 +150,6 @@ hamburgerBtn.addEventListener("click", function (e) {
   }
 });
 
-////lighten other nav items listener
-nav.addEventListener("click", function (e) {
-  console.log(e.target.closest("a"));
-});
-
 //BEGIN POLL FUNCTIONS
 ///////////////////////////SECTION/////////////////////////
 
