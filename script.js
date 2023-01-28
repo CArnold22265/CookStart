@@ -267,8 +267,3 @@ pollSubmitBtn.addEventListener("click", function (e) {
 
 //selects all siblings, including the button as an array
 //console.log([...pollSubmitBtn.parentElement.children]);
-
-////BUG ajax call tester
-const request = fetch("https://api.edamam.com/api/nutrition-details");
-
-console.log(request);
