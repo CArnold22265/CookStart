@@ -237,9 +237,8 @@ pollSubmitBtn.addEventListener("click", function (e) {
 ///////////////////TODO/////////////////
 /*
 1.) create seperate css & js file for the skills page
-2.) 
-3.) SET UP MODAL WHEN LESSON CLICKED FIRST PAGE 
-    3a.) modal should blur the background exit on any click outside the modal, exit when the x in top left of modal is clicked
+2.) if possible, setup the lesons.js and c=script.js as lessons. create a seperate module which determines which of the lessons cards was clicked, the clicked card value should be set to the active lesson on the lessons page when the link is activated. probably create a seperate module for that, and import it to the lessons page and the script.js page...
+3.) setup place holder lorem lessons and test arrows to make sure it works with multiple lessons...
 4.) Finish typing lessons section
 5.) enter valid email modal on poll?
 6.) add 2 lessons
