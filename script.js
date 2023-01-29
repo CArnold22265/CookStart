@@ -246,7 +246,7 @@ pollSubmitBtn.addEventListener("click", function (e) {
     7b.) modal should contain lesson title, the first paragraph of the lesson, and a link at the bottom with the text 'read more', or keep reading.
       7c.)when the link is clicked, it should change the active lesson to the lesson reflected in the modal, adjust as needed.
 8.) store poll results in a database
-9.) 
+9.) set media query for card class making the cards larger on xl screen size similar to firefox cards...
 10.) learn debugger tooltip
 */
 
