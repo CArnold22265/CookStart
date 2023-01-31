@@ -1,5 +1,3 @@
-"use strict";
-
 ///SECTION nav
 const hamburgerBtn = document.querySelector(".burger__button");
 const nav = document.querySelector(".nav-wrap");
@@ -234,6 +232,10 @@ pollSubmitBtn.addEventListener("click", function (e) {
   }
 });
 
+import firstMod from "/modules/rateMe.js";
+console.log(firstMod.intro);
+//////////////////PRACTICE BUG////////////////
+
 ///////////////////TODO/////////////////
 /*
 1.) create seperate css & js file for the skills page
@@ -265,3 +267,28 @@ pollSubmitBtn.addEventListener("click", function (e) {
 
 //selects all siblings, including the button as an array
 //console.log([...pollSubmitBtn.parentElement.children]);
+
+//STUDY Immediately invoked function expressions...
+const Cart2 = (function () {
+  const cart = [];
+  const shippingCost = 10;
+  const totalPrice = 237;
+  const totalQuantity = 23;
+
+  const addToCart = function (product, quantity) {
+    cart.push({ product, quantity });
+    console.log(`${quantity} of ${product} was added to the cart. Shipping cost is ${shippingCost}`);
+  };
+
+  const orderStock = function (product, quantity) {
+    console.log(`${quantity} of ${product} to order to supplier. `);
+  };
+  //STUDY All of the data encapsulated into the function is private data. in order to make any of it public, simply return an pbject containing the values you wish to use..
+  return {
+    addToCart,
+    cart,
+    totalPrice,
+    totalQuantity,
+  };
+  //The returned object is not really stored anywhere until you store it in a variable
+})();
