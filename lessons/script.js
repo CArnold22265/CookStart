@@ -1,4 +1,3 @@
-"use strict";
 ///SECTION nav
 const hamburgerBtn = document.querySelector(".burger__button");
 const nav = document.querySelector(".nav-wrap");
