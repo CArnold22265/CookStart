@@ -240,14 +240,13 @@ pollSubmitBtn.addEventListener("click", function (e) {
 2.) if possible, setup the lesons.js and c=script.js as lessons. create a seperate module which determines which of the lessons cards was clicked, the clicked card value should be set to the active lesson on the lessons page when the link is activated. probably create a seperate module for that, and import it to the lessons page and the script.js page...
 3.) setup place holder lorem lessons and test arrows to make sure it works with multiple lessons...
 4.) Finish typing lessons section
-5.) enter valid email modal on poll?
-6.) add 2 lessons
+5.) 
+6.)
 7.) on lesson card mousein Use event delegation to add a blur to the cards that are not hovered, and grow the card that is hovered. remove class on mouseout.
-    7b.) modal should contain lesson title, the first paragraph of the lesson, and a link at the bottom with the text 'read more', or keep reading.
-      7c.)when the link is clicked, it should change the active lesson to the lesson reflected in the modal, adjust as needed.
 8.) store poll results in a database
 9.) set media query for card class making the cards larger on xl screen size similar to firefox cards...
 10.) learn debugger tooltip
+11.) set a rate this lesson on the bottom of the lesons the rating should be displayed dynamically at the bottom of the lesson card. 
 */
 
 //SECTION//practice on the poll
