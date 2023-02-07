@@ -232,13 +232,13 @@ pollSubmitBtn.addEventListener("click", function (e) {
   }
 });
 
-import firstMod from "/modules/rateMe.js";
-console.log(firstMod.intro);
+import "/modules/login.js";
+
 //////////////////PRACTICE BUG////////////////
 
 ///////////////////TODO/////////////////
 /*
-1.) create seperate css & js file for the skills page
+
 2.) if possible, setup the lesons.js and c=script.js as lessons. create a seperate module which determines which of the lessons cards was clicked, the clicked card value should be set to the active lesson on the lessons page when the link is activated. probably create a seperate module for that, and import it to the lessons page and the script.js page...
 3.) setup place holder lorem lessons and test arrows to make sure it works with multiple lessons...
 4.) Finish typing lessons section
