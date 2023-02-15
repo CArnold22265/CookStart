@@ -1,3 +1,5 @@
+import { cardActiveNum } from "../script.js";
+import { cardEventListener } from "../script.js";
 ///SECTION nav
 const hamburgerBtn = document.querySelector(".burger__button");
 const nav = document.querySelector(".nav-wrap");

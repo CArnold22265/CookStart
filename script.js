@@ -181,6 +181,7 @@ const updatePercArr = function () {
 ////SECTION
 
 //POLL SUBMIT LISTENER
+console.log(pollSubmitBtn);
 pollSubmitBtn.addEventListener("click", function (e) {
   e.preventDefault();
 
@@ -194,7 +195,6 @@ pollSubmitBtn.addEventListener("click", function (e) {
     .includes(true);
 
   if (radioCheckedArr == false) {
-    console.log(pollSubmitBtn);
     //flexWarning = Poll flexbox, see html
     flexWarning.append(span);
     return;
@@ -231,9 +231,19 @@ pollSubmitBtn.addEventListener("click", function (e) {
     pollValueBars();
   }
 });
+const cardContainer = document.querySelector(".cards");
+console.log(cardContainer);
+const cards = document.querySelectorAll(".card");
+console.log(cards);
 
-import "/modules/login.js";
+//////SECTION exporting active lesson value
+let clickedCard = 0;
+export const cardEventListener = cardContainer.addEventListener("click", function (e) {
+  return (clickedCard = e.target.closest("li").getAttribute("data-CardContent"));
+});
+export const cardActiveNum = clickedCard ?? 0;
 
+console.log(clickedCard);
 //////////////////PRACTICE BUG////////////////
 
 ///////////////////TODO/////////////////
