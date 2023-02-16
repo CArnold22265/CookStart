@@ -8,8 +8,10 @@ const pollQ1Radio = document.getElementById("lessons");
 const pollQ2Radio = document.getElementById("poll-recipes");
 const pollQ3Radio = document.getElementById("poll-recipe-book");
 const pollQ4Radio = document.getElementById("poll-users-sec");
+
 //poll submit btn
-const pollSubmitBtn = document.querySelector(".pollBtn");
+const pollSubmitBtn = document.getElementById("poll-submit");
+console.log(pollSubmitBtn);
 // radio button array
 const pollRadios = [pollQ1Radio, pollQ2Radio, pollQ3Radio, pollQ4Radio];
 
@@ -237,13 +239,15 @@ const cards = document.querySelectorAll(".card");
 console.log(cards);
 
 //////SECTION exporting active lesson value
-let clickedCard = 0;
-export const cardEventListener = cardContainer.addEventListener("click", function (e) {
-  return (clickedCard = e.target.closest("li").getAttribute("data-CardContent"));
-});
-export const cardActiveNum = clickedCard ?? 0;
+// let clickedCard = 0;
+// const cardEventListener = cardContainer.addEventListener("click", function (e) {
+//   const clicked = e.target.closest("li");
+//   clickedCard = clicked.getAttribute("data-CardContent");
+//   return clickedCard;
+// });
+// const cardActiveNum = clickedCard ?? 0;
 
-console.log(clickedCard);
+// console.log(clickedCard);
 //////////////////PRACTICE BUG////////////////
 
 ///////////////////TODO/////////////////
