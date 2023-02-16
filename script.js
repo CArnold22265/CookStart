@@ -239,15 +239,16 @@ const cards = document.querySelectorAll(".card");
 console.log(cards);
 
 //////SECTION exporting active lesson value
-// let clickedCard = 0;
-// const cardEventListener = cardContainer.addEventListener("click", function (e) {
-//   const clicked = e.target.closest("li");
-//   clickedCard = clicked.getAttribute("data-CardContent");
-//   return clickedCard;
-// });
-// const cardActiveNum = clickedCard ?? 0;
 
-// console.log(clickedCard);
+let clickedCard = 0;
+export const cardEventListener = cardContainer.addEventListener("click", function (e) {
+  const clicked = e.target.closest("li");
+  clickedCard = clicked.getAttribute("data-CardContent");
+  return clickedCard;
+});
+export default clickedCard;
+
+console.log(clickedCard);
 //////////////////PRACTICE BUG////////////////
 
 ///////////////////TODO/////////////////
