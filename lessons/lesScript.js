@@ -1,5 +1,6 @@
-import { cardActiveNum } from "../script.js";
-import { cardEventListener } from "../script.js";
+//import clickedCard from "../script.js";
+//console.log(clickedCard ?? "");
+// import { cardEventListener } from "../script.js";
 ///SECTION nav
 const hamburgerBtn = document.querySelector(".burger__button");
 const nav = document.querySelector(".nav-wrap");
